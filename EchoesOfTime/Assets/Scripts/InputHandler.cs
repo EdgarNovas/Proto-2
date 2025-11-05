@@ -13,7 +13,7 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
     float currentTimerToCombo;
 
     public event Action JumpEvent;
-    public event Action DodgeEvent;
+    public event Action DashEvent;
     public event Action TargetEvent;
 
     void Start()

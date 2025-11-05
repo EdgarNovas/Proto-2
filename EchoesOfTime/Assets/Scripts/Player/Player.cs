@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     {
         rb.AddForce(forcesPlayerOnFrame);
 
+        Debug.Log(forcesPlayerOnFrame);
         forcesPlayerOnFrame = Vector3.zero;
     }
 
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour
 
     private void InputReader_JumpEvent()
     {
-        
+        forcesPlayerOnFrame += Vector3.up * jumpForce;
     }
 
     private void OnDisable()
