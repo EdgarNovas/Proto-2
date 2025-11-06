@@ -6,6 +6,7 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
 {
     InputSystem_Actions controls;
     public Vector2 MoveVector { get; private set; }
+    public Vector2 LookVector { get; private set; }
 
     public bool IsAttacking { get; private set; }
     public bool IsBlocking { get; private set; }
@@ -89,7 +90,7 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        
+        LookVector = context.ReadValue<Vector2>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
