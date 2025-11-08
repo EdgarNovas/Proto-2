@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -14,6 +13,8 @@ public class Player : MonoBehaviour
     private Vector3 forcesPlayerOnFrame;
     [SerializeField] float camAngleRotation;
     private float verticalCameraRotation = 0f;
+    [SerializeField] float gravityForce = 30f; // tune between 20–40 for realistic feel
+    [SerializeField] float fallMultiplier = 2f; // stronger pull when falling
 
     #region WallRunning
     RaycastHit leftWallHit;
@@ -37,7 +38,8 @@ public class Player : MonoBehaviour
 
     bool isWall => isWallLeft || isWallRight;
 
-
+    //TODO: cuando congeles un objeto se queda en kinematic por 2 segundos
+    //TODO: cuando rebovines esta en kinematic, cuando pares de rebobinar se queda en kinematic por 2 segundos
 
 
     private void OnEnable()
@@ -58,7 +60,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -97,9 +100,11 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
-        AddForces(); //Add all the forces this frame has done
-        //PlayerLook();
+        AddForces(); 
+        
         PlayerLookHorizontal();
+
+        ApplyCustomGravity();
     }
 
     private void AddForces()
@@ -107,7 +112,15 @@ public class Player : MonoBehaviour
         if(!isWall)
         {
             Vector3 moveInput = AddVector2To3(inputReader.MoveVector * movementSpeed);
-            rb.AddForce(moveInput.x * camTrans.right + moveInput.z * camTrans.forward);
+            // FIX HERE: Flatten camera forward/right to ignore vertical tilt
+            Vector3 flatForward = camTrans.forward;
+            flatForward.y = 0f;
+            flatForward.Normalize();
+
+            Vector3 flatRight = camTrans.right;
+            flatRight.y = 0f;
+            flatRight.Normalize();
+            rb.AddForce(moveInput.x * flatRight + moveInput.z * flatForward);
         }
         if(isWall)
         {
@@ -138,7 +151,22 @@ public class Player : MonoBehaviour
             {
                 wallForward = -wallForward; // Reverse if we are running backwards relative to the wall
             }
-            rb.AddForce(wallNormal * (jumpForce * 4),ForceMode.Impulse);
+            float magnitudeJump;
+            if (rb.linearVelocity.magnitude > 2f)
+            {
+                magnitudeJump = 2.5f;
+            }
+            else if (rb.linearVelocity.magnitude < 1f)
+            {
+                magnitudeJump = 1f;
+            }
+            else
+            {
+                magnitudeJump = rb.linearVelocity.magnitude;
+            }
+
+
+            rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
         }
         else if (isGrounded)
         {
@@ -176,19 +204,19 @@ public class Player : MonoBehaviour
         {
             rotateCameraZ = Mathf.Lerp(rotateCameraZ, -camAngleRotation, lerpSpeed);
             rotateCameraZ = Mathf.Clamp(rotateCameraZ, -camAngleRotation, 0f); // Corrected clamp
-            rb.useGravity = false;
+            
         }
         else if (isWallRight)
         {
             rotateCameraZ = Mathf.Lerp(rotateCameraZ, camAngleRotation, lerpSpeed);
             rotateCameraZ = Mathf.Clamp(rotateCameraZ, 0f, camAngleRotation);
-            rb.useGravity = false;
+            
         }
         else
         {
-            // This is the missing part: Lerp back to 0
+            
             rotateCameraZ = Mathf.Lerp(rotateCameraZ, 0f, lerpSpeed);
-            rb.useGravity = true;
+            
         }
 
         if(isWall)
@@ -198,6 +226,7 @@ public class Player : MonoBehaviour
 
         camMove.transform.localRotation = Quaternion.Euler(camMove.transform.localRotation.x, camMove.transform.localRotation.y, rotateCameraZ);
     }
+
 
     private void WallRunningMovement()
     {
@@ -257,5 +286,19 @@ public class Player : MonoBehaviour
             rb.MoveRotation(rb.rotation * deltaRotation);
         }
     }
+
+
+    private void ApplyCustomGravity()
+    {
+        if (isWall)
+            return; // no gravity while wallrunning, handled elsewhere
+
+        // Stronger gravity when player is moving downward
+        if (rb.linearVelocity.y < 0)
+            rb.AddForce(Vector3.down * gravityForce * fallMultiplier, ForceMode.Acceleration);
+        else
+            rb.AddForce(Vector3.down * gravityForce, ForceMode.Acceleration);
+    }
+
 
 }
