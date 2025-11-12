@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
 {
+    private static InputHandler instance;
+    public static InputHandler Instance { get { return instance; } }
+
     InputSystem_Actions controls;
     public Vector2 MoveVector { get; private set; }
     public Vector2 LookVector { get; private set; }
@@ -13,12 +16,20 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
     float maxTimeToCombo = 1.2f;
     float currentTimerToCombo;
 
-    public event Action JumpEvent;
-    public event Action DashEvent;
-    public event Action TargetEvent;
+    public event Action JumpEvent = new Action(delegate {});
+    public event Action DashEvent = new Action(delegate {});
+    public event Action TargetEvent = new Action(delegate {});
 
-    void Start()
+    void Awake()
     {
+        if(instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+
         currentTimerToCombo = maxTimeToCombo;
         controls = new InputSystem_Actions();
         controls.Player.SetCallbacks(this);
@@ -97,7 +108,7 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
     {
         MoveVector = context.ReadValue<Vector2>();
 
-        Debug.Log(MoveVector);
+        //Debug.Log(MoveVector);
     }
 
     public void OnNext(InputAction.CallbackContext context)
@@ -112,8 +123,15 @@ public class InputHandler : MonoBehaviour, InputSystem_Actions.IPlayerActions
 
     public void OnSprint(InputAction.CallbackContext context)
     {
-        
+        if (context.canceled)
+            DashEvent?.Invoke();
     }
 
   
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.canceled) 
+            DashEvent?.Invoke();
+    }
+
 }
