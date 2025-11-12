@@ -36,7 +36,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _BlurOffset: 0.0014
+    - _NumberOfLines: 70
+    - _ScanLinesSpeed: 0.13
+    m_Colors:
+    - _Color: {r: 2.2706022, g: 2.2706022, b: 2.2706022, a: 0}
+    - _ColorBackGroundAlpha: {r: 0, g: 0.023070497, b: 0.3018868, a: 0}
+    - _ColorCRTBlue: {r: 0.013883919, g: 0.65229803, b: 0.9811321, a: 0}
+    - _ColorCRTRed: {r: 0.6509434, g: 0.16273576, b: 0.16273576, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
