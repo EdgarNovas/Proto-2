@@ -4,40 +4,37 @@ public class TimeController : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float raycastDistance = 100f;
+    [SerializeField] private LayerMask hitMask;
 
     // Referencias al objeto que estamos controlando actualmente
     private ITimeReversible currentReversible;
 
-    void Update()
+    void LateUpdate()
     {
-        // Lanzar un raycast desde el centro de la cámara
-        Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        
 
-        // Ponemos el 'if (Physics.Raycast...)' al principio
-        if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance))
+        // --- Congelar objeto (E) ---
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            // --- LÓGICA DE CONGELAR ACTUALIZADA ---
-            if (Input.GetKeyDown(KeyCode.F))
+            TryRaycastAndExecute(hit =>
             {
-                // ¿El objeto que golpeamos implementa la interfaz?
                 if (hit.collider.TryGetComponent<ITimeStoppable>(out var stoppable))
-                {
-                    // ¡Sí! Solo dile que cambie su estado.
-                    // El objeto se encargará del resto.
                     stoppable.ToggleFreeze();
-                }
-            }
+            });
+        }
 
-            // --- LÓGICA DE REBOBINAR (SIN CAMBIOS) ---
-            if (Input.GetKeyDown(KeyCode.R))
+        // --- Empezar rebobinado (R) ---
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            TryRaycastAndExecute(hit =>
             {
                 if (hit.collider.TryGetComponent<ITimeReversible>(out var reversible))
                 {
                     reversible.StartRewind();
                     currentReversible = reversible;
                 }
-            }
-        } // Fin del 'if (Physics.Raycast...)'
+            });
+        }
 
         // --- LÓGICA DE REBOBINAR (SIN CAMBIOS) ---
         // Esto debe ir FUERA del Raycast, para que podamos dejar de
@@ -49,5 +46,24 @@ public class TimeController : MonoBehaviour
         }
 
         
+    }
+
+    private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
+    {
+        Ray ray = mainCamera.ScreenPointToRay(
+     new Vector3(Screen.width / 2, Screen.height / 2)
+   );
+
+        // --- AÑADE ESTA LÍNEA ---
+        // Dibuja el rayo en la vista "Scene" para ver a dónde apunta
+        Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
+        // -----------------------
+
+        if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, hitMask))
+        {
+            // Si entra aquí, añade un log para estar seguro
+            Debug.Log("¡Golpeado! -> " + hit.collider.name, hit.collider.gameObject);
+            onHit?.Invoke(hit);
+        }
     }
 }
