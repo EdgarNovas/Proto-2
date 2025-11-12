@@ -6,10 +6,10 @@ public class TimeController : MonoBehaviour
     [SerializeField] private float raycastDistance = 100f;
     [SerializeField] private LayerMask hitMask;
 
-    // Referencias al objeto que estamos controlando actualmente
+    
     private ITimeReversible currentReversible;
-    public float PenaltyTimer { get; private set; } = 0f;
 
+    public float PenaltyTimer { get; private set; } = 0f;
     void LateUpdate()
     {
         PenaltyTimer += Time.deltaTime;
@@ -18,7 +18,7 @@ public class TimeController : MonoBehaviour
             currentReversible = null;
         }
 
-        // --- Congelar objeto (E) ---
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryRaycastAndExecute(hit =>
@@ -30,26 +30,26 @@ public class TimeController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            // CASO 1: No estábamos rebobinando
+            
             if (currentReversible == null)
             {
-                // Busca un objeto para rebobinar
+                
                 TryRaycastAndExecute(hit =>
                 {
                     if (hit.collider.TryGetComponent<ITimeReversible>(out var reversible))
                     {
                         reversible.StartRewind();
-                        currentReversible = reversible; // Guardamos la referencia
+                        currentReversible = reversible; 
                         AddPenalty(2.0f);
                     }
                 });
             }
-            // CASO 2: Sí estábamos rebobinando
+           
             else
             {
-                // Para el que ya teníamos guardado
+                
                 currentReversible.StopRewind();
-                currentReversible = null; // Soltamos la referencia
+                currentReversible = null; 
             }
         }
 
