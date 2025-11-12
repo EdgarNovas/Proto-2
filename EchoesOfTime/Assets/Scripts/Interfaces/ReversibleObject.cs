@@ -3,25 +3,29 @@ using UnityEngine;
 
 public class ReversibleObject : MonoBehaviour,ITimeReversible
 {
-    // Un "punto en el tiempo" que guarda posición y rotación
+    // Un "punto en el tiempo" que guarda posiciï¿½n y rotaciï¿½n
     private struct PointInTime
     {
         public Vector3 position;
         public Quaternion rotation;
+        public Vector3 velocity;
 
-        public PointInTime(Vector3 pos, Quaternion rot)
+        public PointInTime(Vector3 pos, Quaternion rot, Vector3 vel)
         {
             position = pos;
             rotation = rot;
+            velocity = vel;
         }
     }
 
     // Una lista para guardar el historial
     private List<PointInTime> history = new List<PointInTime>();
-    [SerializeField] private float maxHistorySeconds = 10f; // Cuántos segundos guardar
+    [SerializeField] private float maxHistorySeconds = 10f; // Cuï¿½ntos segundos guardar
 
     private bool isRewinding = false;
     private Rigidbody rb;
+
+    private Vector3 savedVelocity;
 
     void Awake()
     {
@@ -43,30 +47,49 @@ public class ReversibleObject : MonoBehaviour,ITimeReversible
     public void StartRewind()
     {
         isRewinding = true;
-        rb.isKinematic = true; // Quitar de la física mientras se rebobina
+        savedVelocity = rb.linearVelocity;
+        rb.isKinematic = true; 
     }
 
     public void StopRewind()
     {
         isRewinding = false;
-        rb.isKinematic = false; // Devolver a la física
+        rb.isKinematic = false; 
+
+        if (history.Count > 1)
+        {
+            // Tomamos la velocidad del punto grabado
+            rb.linearVelocity = history[history.Count - 1].velocity;
+        }
+        else
+        {
+            // Si no hay historial, usamos la que habia antes del rewind
+            rb.linearVelocity = savedVelocity;
+        }
     }
 
     private void RewindFrame()
     {
         if (history.Count > 0)
         {
-            // Cargar el último punto del historial
+            // Cargar el ultimo punto del historial
             PointInTime point = history[history.Count - 1];
             transform.position = point.position;
             transform.rotation = point.rotation;
 
             // Eliminarlo de la lista
             history.RemoveAt(history.Count - 1);
+            // Si justo despuÃ©s de este frame ya no quedan puntos, aplicamos su Ãºltima velocidad.
+            if (history.Count == 0)
+            {
+                rb.isKinematic = false;
+                rb.linearVelocity = point.velocity;
+                isRewinding = false;
+            }
         }
         else
         {
-            // Si no hay más historial, dejar de rebobinar
+            // Si no hay mï¿½s historial, dejar de rebobinar
             StopRewind();
         }
     }
@@ -81,6 +104,6 @@ public class ReversibleObject : MonoBehaviour,ITimeReversible
         }
 
         // Guardar el estado actual
-        history.Add(new PointInTime(transform.position, transform.rotation));
+        history.Add(new PointInTime(transform.position, transform.rotation, rb.linearVelocity));
     }
 }

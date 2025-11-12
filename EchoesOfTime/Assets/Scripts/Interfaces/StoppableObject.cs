@@ -11,7 +11,7 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = Vector3.forward ;
+        rb.linearVelocity = transform.forward ;
     }
 
     public void ToggleFreeze()
