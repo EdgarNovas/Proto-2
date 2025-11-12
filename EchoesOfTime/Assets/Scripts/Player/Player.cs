@@ -253,11 +253,10 @@ public class Player : MonoBehaviour
         // 1. Calculate Wall Forward Direction
         // Vector3.Cross(wallNormal, transform.up) gives a vector along the wall face.
         // We check the dot product to ensure it's pointing in the player's forward direction.
-        Vector3 wallForward = Vector3.Cross(wallNormal, transform.up);
-        if (Vector3.Dot(wallForward, transform.forward) < 0)
-        {
-            wallForward = -wallForward; // Reverse if we are running backwards relative to the wall
-        }
+        Vector3 wallForward = Vector3.Cross(wallNormal, Camera.main.transform.up);
+
+        // Reverse if we are running backwards relative to the wall
+        wallForward *= Mathf.Sign(Vector3.Dot(wallForward, Camera.main.transform.forward));
 
         // 2. Add Forward Movement Force (Scaled by Movement Speed)
         // We only allow forward input (moveVector.y, which is 'W' or 'S' on a typical WASD setup)
