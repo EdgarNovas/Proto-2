@@ -7,7 +7,7 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
     private Vector3 storedAngularVelocity;
     
     private bool isCurrentlyFrozen = false;
-    public float penaltyTimer = 0f;
+    [SerializeField] float penaltyTime = 10f;
 
     
 
@@ -15,18 +15,9 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
     {
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = transform.forward ;
-        
-        
     }
 
-    private void Update()
-    {
-        if (isCurrentlyFrozen)
-        {
-            penaltyTimer += Time.deltaTime;
-        }
-        
-    }
+
 
     public void ToggleFreeze()
     {
@@ -39,11 +30,11 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
             storedVelocity = rb.linearVelocity;
             storedAngularVelocity = rb.angularVelocity;
             rb.isKinematic = true;
+            TimeManager.Instance.AddTime(penaltyTime);
         }
         else
         {
-            TimeManager.Instance.AddTime(penaltyTimer);
-            penaltyTimer = 0f;
+            
             rb.isKinematic = false;
             rb.linearVelocity = storedVelocity;
             rb.angularVelocity = storedAngularVelocity;

@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89026af5f021f5741bd1774a98d5d22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penaltyTimer: 0
+  penaltyTime: 5
 --- !u!54 &864303233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89026af5f021f5741bd1774a98d5d22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penaltyTimer: 0
+  penaltyTime: 10
 --- !u!54 &1367572090
 Rigidbody:
   m_ObjectHideFlags: 0

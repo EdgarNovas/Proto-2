@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
@@ -9,10 +10,9 @@ public class TimeController : MonoBehaviour
     
     private ITimeReversible currentReversible;
 
-    public float PenaltyTimer { get; private set; } = 0f;
     void LateUpdate()
     {
-        PenaltyTimer += Time.deltaTime;
+    
         if (currentReversible != null && !currentReversible.IsRewinding)
         {
             currentReversible = null;
@@ -40,7 +40,7 @@ public class TimeController : MonoBehaviour
                     {
                         reversible.StartRewind();
                         currentReversible = reversible; 
-                        AddPenalty(2.0f);
+                        TimeManager.Instance.AddTime(10);
                     }
                 });
             }
@@ -58,11 +58,7 @@ public class TimeController : MonoBehaviour
         
     }
 
-    private void AddPenalty(float seconds)
-    {
-        PenaltyTimer += seconds;
-        
-    }
+
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
