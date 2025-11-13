@@ -1,3 +1,4 @@
+ï»¿using System.Threading;
 using UnityEngine;
 
 public class TimeController : MonoBehaviour
@@ -6,14 +7,18 @@ public class TimeController : MonoBehaviour
     [SerializeField] private float raycastDistance = 100f;
     [SerializeField] private LayerMask hitMask;
 
-    // Referencias al objeto que estamos controlando actualmente
+    
     private ITimeReversible currentReversible;
 
     void LateUpdate()
     {
-        
+    
+        if (currentReversible != null && !currentReversible.IsRewinding)
+        {
+            currentReversible = null;
+        }
 
-        // --- Congelar objeto (E) ---
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryRaycastAndExecute(hit =>
@@ -23,30 +28,37 @@ public class TimeController : MonoBehaviour
             });
         }
 
-        // --- Empezar rebobinado (R) ---
         if (Input.GetKeyDown(KeyCode.R))
         {
-            TryRaycastAndExecute(hit =>
+            
+            if (currentReversible == null)
             {
-                if (hit.collider.TryGetComponent<ITimeReversible>(out var reversible))
+                
+                TryRaycastAndExecute(hit =>
                 {
-                    reversible.StartRewind();
-                    currentReversible = reversible;
-                }
-            });
+                    if (hit.collider.TryGetComponent<ITimeReversible>(out var reversible))
+                    {
+                        reversible.StartRewind();
+                        currentReversible = reversible; 
+                        TimeManager.Instance.AddTime(10);
+                    }
+                });
+            }
+           
+            else
+            {
+                
+                currentReversible.StopRewind();
+                currentReversible = null; 
+            }
         }
 
-        // --- LÓGICA DE REBOBINAR (SIN CAMBIOS) ---
-        // Esto debe ir FUERA del Raycast, para que podamos dejar de
-        // rebobinar aunque no estemos mirando al objeto.
-        if (Input.GetKeyUp(KeyCode.R) && currentReversible != null)
-        {
-            currentReversible.StopRewind();
-            currentReversible = null;
-        }
+       
 
         
     }
+
+
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
@@ -54,15 +66,15 @@ public class TimeController : MonoBehaviour
      new Vector3(Screen.width / 2, Screen.height / 2)
    );
 
-        // --- AÑADE ESTA LÍNEA ---
-        // Dibuja el rayo en la vista "Scene" para ver a dónde apunta
+        // --- AÃ‘ADE ESTA LÃNEA ---
+        // Dibuja el rayo en la vista "Scene" para ver a dÃ³nde apunta
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
         // -----------------------
 
         if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, hitMask))
         {
-            // Si entra aquí, añade un log para estar seguro
-            Debug.Log("¡Golpeado! -> " + hit.collider.name, hit.collider.gameObject);
+            // Si entra aquÃ­, aÃ±ade un log para estar seguro
+            Debug.Log("Â¡Golpeado! -> " + hit.collider.name, hit.collider.gameObject);
             onHit?.Invoke(hit);
         }
     }

@@ -5,8 +5,11 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
     private Rigidbody rb;
     private Vector3 storedVelocity;
     private Vector3 storedAngularVelocity;
-
+    
     private bool isCurrentlyFrozen = false;
+    [SerializeField] float penaltyTime = 10f;
+
+    
 
     void Awake()
     {
@@ -14,23 +17,24 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
         rb.linearVelocity = transform.forward ;
     }
 
+
+
     public void ToggleFreeze()
     {
-        // Invierte el estado actual
+        
         isCurrentlyFrozen = !isCurrentlyFrozen;
 
         if (isCurrentlyFrozen)
         {
-            // Guardar el estado actual de la física
+            
             storedVelocity = rb.linearVelocity;
             storedAngularVelocity = rb.angularVelocity;
-
-            // Congelar el objeto
             rb.isKinematic = true;
+            TimeManager.Instance.AddTime(penaltyTime);
         }
         else
         {
-            // Devolver el objeto a la física
+            
             rb.isKinematic = false;
             rb.linearVelocity = storedVelocity;
             rb.angularVelocity = storedAngularVelocity;

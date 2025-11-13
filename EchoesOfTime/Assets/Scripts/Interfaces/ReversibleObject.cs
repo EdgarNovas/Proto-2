@@ -27,6 +27,8 @@ public class ReversibleObject : MonoBehaviour,ITimeReversible
 
     private Vector3 savedVelocity;
 
+    public bool IsRewinding => isRewinding;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,16 +56,17 @@ public class ReversibleObject : MonoBehaviour,ITimeReversible
     public void StopRewind()
     {
         isRewinding = false;
-        rb.isKinematic = false; 
+        rb.isKinematic = false;
 
-        if (history.Count > 1)
+       
+        if (history.Count > 0)
         {
-            // Tomamos la velocidad del punto grabado
+            // usamos la velocidad del punto actual.
             rb.linearVelocity = history[history.Count - 1].velocity;
         }
         else
         {
-            // Si no hay historial, usamos la que habia antes del rewind
+            // usamos la que guardamos al principio.
             rb.linearVelocity = savedVelocity;
         }
     }
