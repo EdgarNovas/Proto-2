@@ -53,6 +53,12 @@ public class ChatManager : MonoBehaviour
         }
 
         UpdateText();
+
+        while(currentMessages.Count > maxMessageCount)
+        {
+            currentMessages.Dequeue();
+            currentMessagesLife.Dequeue();
+        }
     }
 
     private void UpdateLifespans()
@@ -60,19 +66,15 @@ public class ChatManager : MonoBehaviour
         for (int i = currentMessagesLife.Count; i > 0; i--)
         {
             float life = currentMessagesLife.Dequeue();
-            currentMessagesLife.Enqueue(life - Time.deltaTime);
-        }
-        while(currentMessagesLife.Count > 0 && currentMessagesLife.Last() <= 0)
-        {
-            currentMessagesLife.Dequeue();
-            currentMessages.Dequeue();
+            if (life <= 0) currentMessages.Dequeue();
+            else currentMessagesLife.Enqueue(life - Time.deltaTime);
         }
     }
 
     private void UpdateText()
     {
         chatUI.text = "";
-        foreach(var message in currentMessages.Reverse())
+        foreach(var message in currentMessages)
         {
             chatUI.text += $"<color=#{message.Item1.Color.ToHexString()}>{message.Item1.Name}</color> {message.Item2}\n";
         }
