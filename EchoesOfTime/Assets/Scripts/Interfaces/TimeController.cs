@@ -53,7 +53,19 @@ public class TimeController : MonoBehaviour
             }
         }
 
-       
+       if(Input.GetKeyDown(KeyCode.V))
+        {
+            Debug.Log("Check");
+            TryRaycastAndExecute(hit =>
+            {
+                if (!hit.collider.TryGetComponent(out ITimeExplodable explodable)) return;
+
+                Debug.Log("boom");
+
+                explodable.Explode(this.GetComponent<Player>());
+            }
+            );
+        }
 
         
     }
