@@ -27,7 +27,11 @@ public class Player : MonoBehaviour
 
     #endregion
 
+    [Header("Coyote Time")]
+    [SerializeField] float coyoteTimeDuration = 0.15f; // 0.15 segundos
+    private float coyoteTimeCounter;
 
+    [Space(10)]
     [SerializeField] Transform camTrans;
     [SerializeField] Transform camMove;
     bool isWallRight = false;
@@ -71,7 +75,18 @@ public class Player : MonoBehaviour
         
         CheckForWall();
         IsWallRunning();
-       
+
+        if (isGrounded)
+        {
+            // Si estamos en el suelo, reiniciamos el contador
+            coyoteTimeCounter = coyoteTimeDuration;
+        }
+        else
+        {
+            // Si estamos en el aire, empezamos a restar tiempo
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
     }
 
     private void LateUpdate()
@@ -149,12 +164,12 @@ public class Player : MonoBehaviour
             Vector3 wallForward = Vector3.Cross(wallNormal, transform.up);
             if (Vector3.Dot(wallForward, transform.forward) < 0)
             {
-                wallForward = -wallForward; // Reverse if we are running backwards relative to the wall
+                wallForward = -wallForward; 
             }
             float magnitudeJump;
             if (rb.linearVelocity.magnitude > 2f)
             {
-                magnitudeJump = 2.5f;
+                magnitudeJump = 2.3f;
             }
             else if (rb.linearVelocity.magnitude < 1f)
             {
@@ -168,9 +183,11 @@ public class Player : MonoBehaviour
 
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
         }
-        else if (isGrounded)
+        else if (coyoteTimeCounter > 0f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            coyoteTimeCounter = 0f;
         }
        
         
@@ -236,11 +253,10 @@ public class Player : MonoBehaviour
         // 1. Calculate Wall Forward Direction
         // Vector3.Cross(wallNormal, transform.up) gives a vector along the wall face.
         // We check the dot product to ensure it's pointing in the player's forward direction.
-        Vector3 wallForward = Vector3.Cross(wallNormal, transform.up);
-        if (Vector3.Dot(wallForward, transform.forward) < 0)
-        {
-            wallForward = -wallForward; // Reverse if we are running backwards relative to the wall
-        }
+        Vector3 wallForward = Vector3.Cross(wallNormal, Camera.main.transform.up);
+
+        // Reverse if we are running backwards relative to the wall
+        wallForward *= Mathf.Sign(Vector3.Dot(wallForward, Camera.main.transform.forward));
 
         // 2. Add Forward Movement Force (Scaled by Movement Speed)
         // We only allow forward input (moveVector.y, which is 'W' or 'S' on a typical WASD setup)
