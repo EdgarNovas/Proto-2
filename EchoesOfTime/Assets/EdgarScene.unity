@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1823688466}
   raycastDistance: 20000
+  sphereCastRadius: 100
   hitMask:
     serializedVersion: 2
     m_Bits: 8

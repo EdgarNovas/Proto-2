@@ -5,6 +5,7 @@ public class TimeController : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float raycastDistance = 100f;
+    [SerializeField] private float sphereCastRadius = 3f;
     [SerializeField] private LayerMask hitMask;
 
     
@@ -78,15 +79,13 @@ public class TimeController : MonoBehaviour
      new Vector3(Screen.width / 2, Screen.height / 2)
    );
 
-        // --- AÑADE ESTA LÍNEA ---
-        // Dibuja el rayo en la vista "Scene" para ver a dónde apunta
+       
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
-        // -----------------------
+        
 
-        if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, hitMask))
+        if (Physics.SphereCast(ray,2, out RaycastHit hit, raycastDistance, hitMask))
         {
-            // Si entra aquí, añade un log para estar seguro
-            Debug.Log("¡Golpeado! -> " + hit.collider.name, hit.collider.gameObject);
+
             onHit?.Invoke(hit);
         }
     }
