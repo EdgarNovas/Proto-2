@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1823688466}
   raycastDistance: 20000
+  sphereCastRadius: 3
   hitMask:
     serializedVersion: 2
     m_Bits: 8
@@ -1076,6 +1077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penaltyTime: 10
+  speed: 1
+  direction: 0
 --- !u!54 &864303233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1426,6 +1429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penaltyTime: 10
+  speed: 1
+  direction: 0
 --- !u!54 &1367572090
 Rigidbody:
   m_ObjectHideFlags: 0
