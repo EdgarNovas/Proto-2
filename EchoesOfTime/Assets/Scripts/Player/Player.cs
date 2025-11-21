@@ -85,6 +85,8 @@ public class Player : MonoBehaviour
         {
             // Si estamos en el suelo, reiniciamos el contador
             coyoteTimeCounter = coyoteTimeDuration;
+            AudioManager.instance.sfxSource.loop = true;
+            AudioManager.instance.PlaySFX("Run");
         }
         else
         {
@@ -190,10 +192,14 @@ public class Player : MonoBehaviour
 
 
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
         }
         else if (coyoteTimeCounter > 0f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
 
             coyoteTimeCounter = 0f;
         }

@@ -35,7 +35,10 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         SceneManager.sceneLoaded += delegate (Scene loadedScene, LoadSceneMode loadedSceneMode)
-        { if (resetSpeedsOnSceneChange) ResetAudioSpeed(); };
+        { 
+            if (resetSpeedsOnSceneChange) ResetAudioSpeed();
+            PlayMusic(loadedScene.name);
+        };
     }
     public void ResetAudioSpeed()
     {
@@ -70,6 +73,7 @@ public class AudioManager : MonoBehaviour
         {
             if (soundCooldowns.ContainsKey(name) && Time.time - soundCooldowns[name] < cooldownTime) return; // Avoids saturating
             soundCooldowns[name] = Time.time;
+            if (sfxSource.clip == s.Clip) return;
             sfxSource.PlayOneShot(s.Clip);
         }
     }
