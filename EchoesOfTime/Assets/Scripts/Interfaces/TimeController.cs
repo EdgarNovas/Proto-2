@@ -75,8 +75,8 @@ public class TimeController : MonoBehaviour
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
-        Ray ray = mainCamera.ScreenPointToRay(
-     new Vector3(Screen.width / 2, Screen.height / 2)
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward//Camera.main.ScreenToWorldPoint(
+     //new Vector3(Screen.width / 2, Screen.height / 2, 10) - Camera.main.transform.position)
    );
 
        
