@@ -9,6 +9,6 @@ public interface ITimeExplodable
     {
         if (!player.TryGetComponent(out Rigidbody rb)) return;
 
-        rb.AddExplosionForce(ExplosionForce, Transform.position, ExplosionRadius);
+        rb.AddForce((player.transform.position - Transform.position).normalized * ExplosionForce, ForceMode.Impulse);
     }
 }
