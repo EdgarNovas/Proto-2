@@ -43,7 +43,7 @@ public class ChatManager : MonoBehaviour
         nextMessageDelay -= Time.deltaTime;
         UpdateLifespans();
 
-        Debug.Log(currentMessages.Count);
+        //Debug.Log(currentMessages.Count);
 
         if(nextMessageDelay <= 0)
         {
