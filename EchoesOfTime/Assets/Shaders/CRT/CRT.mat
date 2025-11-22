@@ -38,7 +38,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlurOffset: 0.00149
-    - _NumberOfLines: 120
+    - _NumberOfLines: 100
     - _ScanLinesSpeed: 0.069
     m_Colors:
     - _Color: {r: 2.2706022, g: 2.2706022, b: 2.2706022, a: 0}

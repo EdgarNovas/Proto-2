@@ -24,6 +24,10 @@ public class ChatManager : MonoBehaviour
     private Queue<(ChatData.User, string)> currentMessages = new Queue<(ChatData.User, string)>();
     private Queue<float> currentMessagesLife = new Queue<float>();
 
+    [Header("UI References")]
+    [SerializeField] private GameObject chatMessagePrefab; 
+    [SerializeField] private Transform chatContainer;      //Vertical layout
+    private float nextMessageTimer;
     [SerializeField] private TMP_Text chatUI;
 
     void Start()
@@ -40,43 +44,65 @@ public class ChatManager : MonoBehaviour
 
     void Update()
     {
-        nextMessageDelay -= Time.deltaTime;
-        UpdateLifespans();
+        HandleBackgroundChat();
+    }
 
-        Debug.Log(currentMessages.Count);
+    private void HandleBackgroundChat()
+    {
+        nextMessageTimer -= Time.deltaTime;
 
-        if(nextMessageDelay <= 0)
+        if (nextMessageTimer <= 0)
         {
-            currentMessages.Enqueue(chatData.GetMessage(ChatData.Emotion.RANDOM));
-            currentMessagesLife.Enqueue(messageLifespan);
-            nextMessageDelay = Random.Range(minMessageDelay, maxMessageDelay);
-        }
+           
+            (ChatData.User user, string message) = chatData.GetMessage(ChatData.Emotion.RANDOM);
 
-        UpdateText();
+            CreateVisualMessage(user.Name, message, user.Color);
 
-        while(currentMessages.Count > maxMessageCount)
-        {
-            currentMessages.Dequeue();
-            currentMessagesLife.Dequeue();
+            nextMessageTimer = Random.Range(minMessageDelay, maxMessageDelay);
         }
     }
 
-    private void UpdateLifespans()
+    public void OnTrickPerformed(string trickName, int score)
     {
-        for (int i = currentMessagesLife.Count; i > 0; i--)
-        {
-            float life = currentMessagesLife.Dequeue();
-            if (life <= 0) currentMessages.Dequeue();
-            else currentMessagesLife.Enqueue(life - Time.deltaTime);
-        }
+      
+
+        ChatData.User randomUser = chatData.users[Random.Range(0, chatData.users.Count)];
+
+       
+        string hypeMessage = $"WOAH! {trickName}!! <color=yellow>+{score}</color>";
+
+      
+        CreateVisualMessage(randomUser.Name, hypeMessage, randomUser.Color);
+
+      
+        nextMessageTimer = Random.Range(2f, 4f);
     }
 
-    private void UpdateText()
+  
+    public void OnFail()
     {
-        chatUI.text = "";
-        foreach(var message in currentMessages)
+       
+        (ChatData.User user, string message) = chatData.GetMessage(ChatData.Emotion.HATE);
+        CreateVisualMessage(user.Name, message, user.Color);
+    }
+
+    private void CreateVisualMessage(string name, string text, Color color)
+    {
+      
+        GameObject newMsgObj = Instantiate(chatMessagePrefab, chatContainer);
+
+       
+        ChatMessageController controller = newMsgObj.GetComponent<ChatMessageController>();
+        if (controller != null)
         {
-            chatUI.text += $"<color=#{message.Item1.Color.ToHexString()}>{message.Item1.Name}</color> {message.Item2}\n";
+            controller.Setup(name, text, color, messageLifespan);
+        }
+
+       
+        if (chatContainer.childCount > maxMessageCount)
+        {
+          
+            Destroy(chatContainer.GetChild(0).gameObject);
         }
     }
 }
