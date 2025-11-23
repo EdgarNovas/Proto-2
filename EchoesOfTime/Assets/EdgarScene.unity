@@ -168,6 +168,7 @@ MonoBehaviour:
     m_Bits: 64
   raycastLenght: 1
   groundRaycastLenght: 1.2
+  crosshair: {fileID: 2014290693}
   coyoteTimeDuration: 0.15
   camTrans: {fileID: 1823688467}
   camMove: {fileID: 1823688467}
@@ -2604,7 +2605,7 @@ GameObject:
   - component: {fileID: 1816502706}
   - component: {fileID: 1816502705}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ChatTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3197,8 +3198,9 @@ GameObject:
   - component: {fileID: 2014290690}
   - component: {fileID: 2014290692}
   - component: {fileID: 2014290691}
+  - component: {fileID: 2014290693}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CrossHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3236,14 +3238,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0, b: 0.08236856, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6c34c7bbc52233a4298a0993e8e153b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3261,6 +3263,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014290689}
   m_CullTransparentMesh: 1
+--- !u!114 &2014290693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014290689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d5eb9c6ea9546aee2d92c9aab3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 152852629}
+  crosshairRect: {fileID: 2014290690}
+  minSize: 30
+  maxSize: 80
+  speedMultiplier: 2
+  smoothTime: 0.1
 --- !u!1 &2066619867
 GameObject:
   m_ObjectHideFlags: 0

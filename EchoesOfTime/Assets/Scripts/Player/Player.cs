@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] float groundRaycastLenght = .2f;
 
     #endregion
+    [SerializeField]DynamicCrosshair crosshair;
 
     [Header("Coyote Time")]
     [SerializeField] float coyoteTimeDuration = 0.15f; // 0.15 segundos
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        
 
         
 
@@ -188,7 +190,7 @@ public class Player : MonoBehaviour
                 magnitudeJump = rb.linearVelocity.magnitude;
             }
 
-
+            crosshair.Pulse();
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
         }
         else if (coyoteTimeCounter > 0f)
