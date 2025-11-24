@@ -3,7 +3,12 @@ guid: de602dfbc5714e044b25814fd6d567b7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Modular_Railway_Track_Buffer_ufekab3dw_8K
+    second: {fileID: 2100000, guid: 80c828682e806b648b8450b0b15d719e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: c56c8d5e674f35647b152fec5d8fe22c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Horse_Hitching_Post_udeuahzqx_8K
+    second: {fileID: 2100000, guid: 7e20a8545cd5d7a438911c9194fb5327, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: ff7b994477a0f564e8b94c0b4c8241e0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Nordic_Beach_Rock_Formation_vjunffdfa_8K
+    second: {fileID: 2100000, guid: da92076b263386546ae5e0960574f511, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

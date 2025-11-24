@@ -3,7 +3,17 @@ guid: c4bfaeda5b3e402408ee4be630d41ca6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Mill_Planks_01a
+    second: {fileID: 2100000, guid: 88276b317b63ff642af363ab26ce5987, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_WoodTrim_01a
+    second: {fileID: 2100000, guid: f41850bc7d0ce514dbdaaf4a60ff5e86, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
