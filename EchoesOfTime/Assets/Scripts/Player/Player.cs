@@ -85,8 +85,15 @@ public class Player : MonoBehaviour
         {
             // Si estamos en el suelo, reiniciamos el contador
             coyoteTimeCounter = coyoteTimeDuration;
-            AudioManager.instance.sfxSource.loop = true;
-            AudioManager.instance.PlaySFX("Run");
+            if(inputReader.MoveVector.sqrMagnitude > 0f)
+            {
+                AudioManager.instance.sfxSource.loop = true;
+                AudioManager.instance.PlaySFX("Run");
+            } else if(AudioManager.instance.curSFX == "Run")
+            {
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.StopSFX();
+            }
         }
         else
         {

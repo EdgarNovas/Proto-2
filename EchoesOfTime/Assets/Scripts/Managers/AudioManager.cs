@@ -21,6 +21,9 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
+    public string curMusic = "";
+    public string curSFX = "";
+
     private Dictionary<string, float> soundCooldowns = new Dictionary<string, float>();
     private float cooldownTime = 0.15f;
     private void Awake()
@@ -72,9 +75,10 @@ public class AudioManager : MonoBehaviour
         if (s != null)
         {
             if (soundCooldowns.ContainsKey(name) && Time.time - soundCooldowns[name] < cooldownTime) return; // Avoids saturating
+            if (name == curSFX && sfxSource.isPlaying) return;
             soundCooldowns[name] = Time.time;
-            if (sfxSource.clip == s.Clip) return;
             sfxSource.PlayOneShot(s.Clip);
+            curSFX = name;
         }
     }
     public void StopMusic()
