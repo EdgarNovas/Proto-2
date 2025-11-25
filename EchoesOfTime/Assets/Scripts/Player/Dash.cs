@@ -30,5 +30,7 @@ public class Dash : MonoBehaviour
 
         rb.AddForce(transform.forward * force, ForceMode.Impulse);
         timer = cooldownTime;
+        AudioManager.instance.sfxSource.loop = false;
+        AudioManager.instance.PlaySFX("Dash");
     }
 }

@@ -17,6 +17,15 @@ public class ChatManager : MonoBehaviour
     [SerializeField] private float minMessageDelay;
     [SerializeField] private float maxMessageDelay;
 
+    [SerializeField] private float minMessageDelayBurst;
+    [SerializeField] private float maxMessageDelayBurst;
+
+    private bool isBursting = false;
+    private ChatData.Emotion burstEmotion;
+
+    [SerializeField] private float burstDuration;
+    [SerializeField] private float curBurstDuration;
+
     [SerializeField] private int maxMessageCount;
 
     [SerializeField] private float messageLifespan;
@@ -24,15 +33,11 @@ public class ChatManager : MonoBehaviour
     private Queue<(ChatData.User, string)> currentMessages = new Queue<(ChatData.User, string)>();
     private Queue<float> currentMessagesLife = new Queue<float>();
 
-    [Header("UI References")]
-    [SerializeField] private GameObject chatMessagePrefab; 
-    [SerializeField] private Transform chatContainer;      //Vertical layout
-    private float nextMessageTimer;
     [SerializeField] private TMP_Text chatUI;
 
     void Start()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(this.gameObject);
             return;
@@ -44,65 +49,60 @@ public class ChatManager : MonoBehaviour
 
     void Update()
     {
-        HandleBackgroundChat();
-    }
+        nextMessageDelay -= Time.deltaTime;
+        if (isBursting) curBurstDuration += Time.deltaTime;
+        UpdateLifespans();
 
-    private void HandleBackgroundChat()
-    {
-        nextMessageTimer -= Time.deltaTime;
-
-        if (nextMessageTimer <= 0)
+        if (curBurstDuration > burstDuration)
         {
-           
-            (ChatData.User user, string message) = chatData.GetMessage(ChatData.Emotion.RANDOM);
+            isBursting = false;
+        }
 
-            CreateVisualMessage(user.Name, message, user.Color);
+        if (nextMessageDelay <= 0)
+        {
+            currentMessages.Enqueue((isBursting)
+                ? chatData.GetMessage(burstEmotion)
+                : chatData.GetMessage(ChatData.Emotion.NONE)
+                );
+            currentMessagesLife.Enqueue(messageLifespan);
+            nextMessageDelay = Random.Range(
+                (!isBursting) ? minMessageDelay : minMessageDelayBurst,
+                (!isBursting) ? maxMessageDelay : maxMessageDelayBurst
+                );
+        }
 
-            nextMessageTimer = Random.Range(minMessageDelay, maxMessageDelay);
+        UpdateText();
+
+        while (currentMessages.Count > maxMessageCount)
+        {
+            currentMessages.Dequeue();
+            currentMessagesLife.Dequeue();
         }
     }
 
-    public void OnTrickPerformed(string trickName, int score)
+    private void UpdateLifespans()
     {
-      
-
-        ChatData.User randomUser = chatData.users[Random.Range(0, chatData.users.Count)];
-
-       
-        string hypeMessage = $"WOAH! {trickName}!! <color=yellow>+{score}</color>";
-
-      
-        CreateVisualMessage(randomUser.Name, hypeMessage, randomUser.Color);
-
-      
-        nextMessageTimer = Random.Range(2f, 4f);
-    }
-
-  
-    public void OnFail()
-    {
-       
-        (ChatData.User user, string message) = chatData.GetMessage(ChatData.Emotion.HATE);
-        CreateVisualMessage(user.Name, message, user.Color);
-    }
-
-    private void CreateVisualMessage(string name, string text, Color color)
-    {
-      
-        GameObject newMsgObj = Instantiate(chatMessagePrefab, chatContainer);
-
-       
-        ChatMessageController controller = newMsgObj.GetComponent<ChatMessageController>();
-        if (controller != null)
+        for (int i = currentMessagesLife.Count; i > 0; i--)
         {
-            controller.Setup(name, text, color, messageLifespan);
+            float life = currentMessagesLife.Dequeue();
+            if (life <= 0) currentMessages.Dequeue();
+            else currentMessagesLife.Enqueue(life - Time.deltaTime);
         }
+    }
 
-       
-        if (chatContainer.childCount > maxMessageCount)
+    public void MessageBurst(ChatData.Emotion emotion)
+    {
+        isBursting = true;
+        burstEmotion = emotion;
+        curBurstDuration = 0;
+    }
+
+    private void UpdateText()
+    {
+        chatUI.text = "";
+        foreach (var message in currentMessages)
         {
-          
-            Destroy(chatContainer.GetChild(0).gameObject);
+            chatUI.text += $"<color=#{message.Item1.Color.ToHexString()}>{message.Item1.Name}</color> {message.Item2}\n";
         }
     }
 }
