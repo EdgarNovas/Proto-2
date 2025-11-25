@@ -29,6 +29,7 @@ public class TimeController : MonoBehaviour
                     stoppable.ToggleFreeze();
                     AudioManager.instance.sfxSource.loop = false;
                     AudioManager.instance.PlaySFX("StopTime");
+                    ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
                 }
             });
         }
@@ -48,6 +49,7 @@ public class TimeController : MonoBehaviour
                         TimeManager.Instance.AddTime(10);
                         AudioManager.instance.sfxSource.loop = false;
                         AudioManager.instance.PlaySFX("ReverseTime");
+                        ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
                     }
                 });
             }
@@ -70,6 +72,7 @@ public class TimeController : MonoBehaviour
                 Debug.Log("boom");
                 AudioManager.instance.sfxSource.loop = false;
                 AudioManager.instance.PlaySFX("ExplodeTime");
+                ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
 
                 explodable.Explode(this.GetComponent<Player>());
             }

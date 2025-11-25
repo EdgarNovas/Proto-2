@@ -17,6 +17,15 @@ public class ChatManager : MonoBehaviour
     [SerializeField] private float minMessageDelay;
     [SerializeField] private float maxMessageDelay;
 
+    [SerializeField] private float minMessageDelayBurst;
+    [SerializeField] private float maxMessageDelayBurst;
+
+    private bool isBursting = false;
+    private ChatData.Emotion burstEmotion;
+
+    [SerializeField] private float burstDuration;
+    [SerializeField] private float curBurstDuration;
+
     [SerializeField] private int maxMessageCount;
 
     [SerializeField] private float messageLifespan;
@@ -41,15 +50,25 @@ public class ChatManager : MonoBehaviour
     void Update()
     {
         nextMessageDelay -= Time.deltaTime;
+        if (isBursting) curBurstDuration += Time.deltaTime;
         UpdateLifespans();
 
-        //Debug.Log(currentMessages.Count);
+        if(curBurstDuration > burstDuration)
+        {
+            isBursting = false;
+        }
 
         if(nextMessageDelay <= 0)
         {
-            currentMessages.Enqueue(chatData.GetMessage(ChatData.Emotion.RANDOM));
+            currentMessages.Enqueue((isBursting) 
+                ? chatData.GetMessage(burstEmotion) 
+                : chatData.GetMessage(ChatData.Emotion.NONE)
+                );
             currentMessagesLife.Enqueue(messageLifespan);
-            nextMessageDelay = Random.Range(minMessageDelay, maxMessageDelay);
+            nextMessageDelay = Random.Range(
+                (!isBursting) ? minMessageDelay : minMessageDelayBurst,
+                (!isBursting) ? maxMessageDelay : maxMessageDelayBurst
+                );
         }
 
         UpdateText();
@@ -69,6 +88,13 @@ public class ChatManager : MonoBehaviour
             if (life <= 0) currentMessages.Dequeue();
             else currentMessagesLife.Enqueue(life - Time.deltaTime);
         }
+    }
+
+    public void MessageBurst(ChatData.Emotion emotion)
+    {
+        isBursting = true;
+        burstEmotion = emotion;
+        curBurstDuration = 0;
     }
 
     private void UpdateText()
