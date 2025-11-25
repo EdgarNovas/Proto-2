@@ -11,6 +11,12 @@ public class TimeController : MonoBehaviour
     
     private ITimeReversible currentReversible;
 
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }
+
     void LateUpdate()
     {
     
@@ -75,15 +81,13 @@ public class TimeController : MonoBehaviour
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward//Camera.main.ScreenToWorldPoint(
-     //new Vector3(Screen.width / 2, Screen.height / 2, 10) - Camera.main.transform.position)
-   );
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
        
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
         
 
-        if (Physics.SphereCast(ray,2, out RaycastHit hit, raycastDistance, hitMask))
+        if (Physics.SphereCast(ray,sphereCastRadius, out RaycastHit hit, raycastDistance, hitMask))
         {
 
             onHit?.Invoke(hit);
