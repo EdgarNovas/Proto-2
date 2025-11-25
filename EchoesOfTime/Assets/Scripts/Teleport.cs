@@ -16,9 +16,13 @@ public class Teleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && 
+        if (Input.GetKeyDown(KeyCode.E) &&
             Vector3.Distance(this.transform.position, Camera.main.transform.position) < interactionDist &&
-            Vector3.Dot(Camera.main.transform.forward, transform.forward) < -Mathf.Cos(angleTolerance)) 
+            Vector3.Dot(Camera.main.transform.forward, transform.forward) < -Mathf.Cos(angleTolerance))
+        {
             SceneManager.LoadScene(targetScene);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Teleport");
+        }
     }
 }

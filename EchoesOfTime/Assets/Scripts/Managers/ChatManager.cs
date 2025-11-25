@@ -17,6 +17,15 @@ public class ChatManager : MonoBehaviour
     [SerializeField] private float minMessageDelay;
     [SerializeField] private float maxMessageDelay;
 
+    [SerializeField] private float minMessageDelayBurst;
+    [SerializeField] private float maxMessageDelayBurst;
+
+    private bool isBursting = false;
+    private ChatData.Emotion burstEmotion;
+
+    [SerializeField] private float burstDuration;
+    [SerializeField] private float curBurstDuration;
+
     [SerializeField] private int maxMessageCount;
 
     [SerializeField] private float messageLifespan;
@@ -28,7 +37,7 @@ public class ChatManager : MonoBehaviour
 
     void Start()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(this.gameObject);
             return;
@@ -41,20 +50,30 @@ public class ChatManager : MonoBehaviour
     void Update()
     {
         nextMessageDelay -= Time.deltaTime;
+        if (isBursting) curBurstDuration += Time.deltaTime;
         UpdateLifespans();
 
-        //Debug.Log(currentMessages.Count);
-
-        if(nextMessageDelay <= 0)
+        if (curBurstDuration > burstDuration)
         {
-            currentMessages.Enqueue(chatData.GetMessage(ChatData.Emotion.RANDOM));
+            isBursting = false;
+        }
+
+        if (nextMessageDelay <= 0)
+        {
+            currentMessages.Enqueue((isBursting)
+                ? chatData.GetMessage(burstEmotion)
+                : chatData.GetMessage(ChatData.Emotion.NONE)
+                );
             currentMessagesLife.Enqueue(messageLifespan);
-            nextMessageDelay = Random.Range(minMessageDelay, maxMessageDelay);
+            nextMessageDelay = Random.Range(
+                (!isBursting) ? minMessageDelay : minMessageDelayBurst,
+                (!isBursting) ? maxMessageDelay : maxMessageDelayBurst
+                );
         }
 
         UpdateText();
 
-        while(currentMessages.Count > maxMessageCount)
+        while (currentMessages.Count > maxMessageCount)
         {
             currentMessages.Dequeue();
             currentMessagesLife.Dequeue();
@@ -71,10 +90,17 @@ public class ChatManager : MonoBehaviour
         }
     }
 
+    public void MessageBurst(ChatData.Emotion emotion)
+    {
+        isBursting = true;
+        burstEmotion = emotion;
+        curBurstDuration = 0;
+    }
+
     private void UpdateText()
     {
         chatUI.text = "";
-        foreach(var message in currentMessages)
+        foreach (var message in currentMessages)
         {
             chatUI.text += $"<color=#{message.Item1.Color.ToHexString()}>{message.Item1.Name}</color> {message.Item2}\n";
         }

@@ -15,11 +15,61 @@ MonoBehaviour:
   users:
   - Name: eauna
     Color: {r: 0.64400053, g: 0, b: 1, a: 1}
+  - Name: Blane
+    Color: {r: 0, g: 0.8030219, b: 1, a: 1}
+  - Name: pocketrocket
+    Color: {r: 1, g: 0.31328887, b: 0, a: 1}
+  - Name: Satsuk1
+    Color: {r: 1, g: 0, b: 0.917572, a: 1}
+  - Name: MYBLOD
+    Color: {r: 1, g: 0, b: 0.028755665, a: 1}
+  - Name: Super Stud
+    Color: {r: 0.48985946, g: 1, b: 0, a: 1}
+  - Name: InkSans
+    Color: {r: 0, g: 0.027500153, b: 1, a: 1}
+  - Name: badkid
+    Color: {r: 1, g: 0.06189992, b: 0, a: 1}
+  - Name: KittK
+    Color: {r: 1, g: 0, b: 0.7856684, a: 1}
+  - Name: CRUZ3
+    Color: {r: 0.1946001, g: 1, b: 0, a: 1}
+  - Name: den4li
+    Color: {r: 0, g: 0.5888634, b: 1, a: 1}
+  - Name: extonX
+    Color: {r: 1, g: 0.88352054, b: 0, a: 1}
+  - Name: $KILLR
+    Color: {r: 1, g: 0.376699, b: 0, a: 1}
+  - Name: cyclon
+    Color: {r: 0, g: 1, b: 0.96070147, a: 1}
+  - Name: GrumpyPuppy
+    Color: {r: 1, g: 0, b: 0.34122944, a: 1}
+  - Name: cyclon
+    Color: {r: 0.64400053, g: 0, b: 1, a: 1}
   defaultMessages:
   - Hello
+  - Hi
+  - How's it going everyone?
+  - Watcha doin
+  - What're we doing today?
+  - ooo timex nicee
+  - ':pog:'
   excitedMessages:
   - WOAH
+  - YOO
+  - crazyyy
+  - no way that just happened
+  - chat is this real?
+  - absolute cinema
+  - WOWWWW
+  - POGGG
   scaredMessages:
-  - Goddamn
+  - Goddamn!
+  - are they all good??
+  - what happened??!!
+  - WHAT
+  - ARE YOU OKAY OMG
   hateMessages:
   - Trash fr
+  - this is garbage
+  - what am I even watching rn
+  - ngl this is just bad

@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] float groundRaycastLenght = .2f;
 
     #endregion
+    [SerializeField]DynamicCrosshair crosshair;
 
     [Header("Coyote Time")]
     [SerializeField] float coyoteTimeDuration = 0.15f; // 0.15 segundos
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        
 
         
 
@@ -85,6 +87,15 @@ public class Player : MonoBehaviour
         {
             // Si estamos en el suelo, reiniciamos el contador
             coyoteTimeCounter = coyoteTimeDuration;
+            if(inputReader.MoveVector.sqrMagnitude > 0f)
+            {
+                AudioManager.instance.sfxSource.loop = true;
+                AudioManager.instance.PlaySFX("Run");
+            } else if(AudioManager.instance.curSFX == "Run")
+            {
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.StopSFX();
+            }
         }
         else
         {
@@ -183,12 +194,16 @@ public class Player : MonoBehaviour
                 magnitudeJump = rb.linearVelocity.magnitude;
             }
 
-
+            crosshair.Pulse();
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
         }
         else if (coyoteTimeCounter > 0f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
 
             coyoteTimeCounter = 0f;
         }
