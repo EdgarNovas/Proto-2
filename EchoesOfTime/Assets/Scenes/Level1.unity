@@ -1508,36 +1508,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.24611054
+      value: -0.423141
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.8132016
+      value: -0.7367623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.52499545
+      value: 0.5227774
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.050124492
+      value: -0.069547765
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -200.343
+      value: -224.125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.257004
+      value: 28.266006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 69.549
+      value: 82.37
       objectReference: {fileID: 0}
     - target: {fileID: -3714014127140458465, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 7345296837779742843, guid: 0b3a9e5c42ef3da488cad3418ff4ae62, type: 3}
+      objectReference: {fileID: 2100000, guid: 66fe2acac56f41f4db086135e1cb3bf2, type: 2}
     - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_LOD0_uk3ndfyga (4)
@@ -1545,11 +1545,11 @@ PrefabInstance:
     - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 7345296837779742843, guid: 0b3a9e5c42ef3da488cad3418ff4ae62, type: 3}
+      objectReference: {fileID: 2100000, guid: 66fe2acac56f41f4db086135e1cb3bf2, type: 2}
     - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 7345296837779742843, guid: 0b3a9e5c42ef3da488cad3418ff4ae62, type: 3}
+      objectReference: {fileID: 2100000, guid: 66fe2acac56f41f4db086135e1cb3bf2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17522,6 +17522,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
     - target: {fileID: 919132149155446097, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
       propertyPath: m_Name
       value: SM_Bridge02 (5)
@@ -23304,7 +23312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -706822286215399499, guid: e774e04380ce3b44ab253f8f1580f46f, type: 3}
+  - {fileID: 2100000, guid: 0bee067e3df297d4e9513cc33a393b43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23999,7 +24007,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -706822286215399499, guid: e774e04380ce3b44ab253f8f1580f46f, type: 3}
+  - {fileID: 2100000, guid: 0bee067e3df297d4e9513cc33a393b43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29470,83 +29478,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc208851991fc8248b0d48034446019b, type: 3}
---- !u!1001 &1422327368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.8497367
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.8497367
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5.8497367
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.0799
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 25.147
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 176.55
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5762489
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.38189417
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.06425412
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7196982
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -200.343
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -221.701
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 69.549
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: m_Name
-      value: Nordic_Beach_Rock_LOD0_uk3ndfyga (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 7345296837779742843, guid: 0b3a9e5c42ef3da488cad3418ff4ae62, type: 3}
-    - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 7345296837779742843, guid: 0b3a9e5c42ef3da488cad3418ff4ae62, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
 --- !u!1001 &1422377708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35046,6 +34977,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.105
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: f1ad371f12bacbc4da7c97b9b2758cdb, type: 3}
       propertyPath: m_Name
       value: SM_Bridge02 (1)
@@ -35523,7 +35462,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36814,6 +36753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -36.704
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 69934544008a71e4fb5848811f8ce76f, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (3)
@@ -42752,7 +42695,6 @@ SceneRoots:
   - {fileID: 799796292}
   - {fileID: 437919356}
   - {fileID: 360652275}
-  - {fileID: 1422327368}
   - {fileID: 341716093}
   - {fileID: 296362165}
   - {fileID: 1973949854}
