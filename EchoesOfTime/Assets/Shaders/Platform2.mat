@@ -67,7 +67,7 @@ Material:
     - _DepthOffsetEnable: 0
     - _DisolveEmissiveMaximum: 7972.78
     - _DisolveWidth: 0.999
-    - _Disolve_Amount: 0.10672661
+    - _Disolve_Amount: -0.004227815
     - _DissolveScale: 500
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
