@@ -3329,6 +3329,10 @@ MonoBehaviour:
   nextMessageDelay: 0
   minMessageDelay: 1
   maxMessageDelay: 5
+  minMessageDelayBurst: 0.2
+  maxMessageDelayBurst: 0.5
+  burstDuration: 3
+  curBurstDuration: 0
   maxMessageCount: 10
   messageLifespan: 5
   chatUI: {fileID: 995099050}
@@ -3379,8 +3383,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
