@@ -1,0 +1,14 @@
+Begin Object Class=/Script/Foliage.FoliageType_InstancedStaticMesh Name="FT_Grass03" ExportPath="/Script/Foliage.FoliageType_InstancedStaticMesh'/Game/FantasyBundle/Meshes/FT_Grass03.FT_Grass03'"
+   Mesh="/Script/Engine.StaticMesh'/Game/FantasyBundle/Meshes/SM_Grass03.SM_Grass03'"
+   UpdateGuid=8216D0094490C8DD74818A8361D00876
+   Density=10000.000000
+   Scaling=Free
+   ScaleX=(Min=0.200000,Max=0.750000)
+   ScaleY=(Min=0.200000,Max=0.750000)
+   ScaleZ=(Min=0.200000,Max=0.750000)
+   AlignMaxAngle=0.500000
+   RandomPitchAngle=60.000000
+   ScaleCurve=(EditorCurveData=())
+   DensityFalloff=(FalloffCurve=(EditorCurveData=()))
+   bIncludeInHLOD=False
+End Object

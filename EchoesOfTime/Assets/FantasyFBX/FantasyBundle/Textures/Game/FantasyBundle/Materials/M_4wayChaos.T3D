@@ -1,0 +1,304 @@
+Begin Object Class=/Script/Engine.MaterialFunction Name="M_4wayChaos" ExportPath="/Script/Engine.MaterialFunction'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos'"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTime Name="MaterialExpressionTime_0" ExportPath="/Script/Engine.MaterialExpressionTime'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTime_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_6" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_6'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_4" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_2" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_0" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObject Name="MaterialExpressionTextureObject_0" ExportPath="/Script/Engine.MaterialExpressionTextureObject'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureObject_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_0" ExportPath="/Script/Engine.MaterialExpressionTextureCoordinate'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureCoordinate_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPanner Name="MaterialExpressionPanner_3" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_3'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPanner Name="MaterialExpressionPanner_2" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPanner Name="MaterialExpressionPanner_1" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPanner Name="MaterialExpressionPanner_0" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_3" ExportPath="/Script/Engine.MaterialExpressionMultiply'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionMultiply_3'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_2" ExportPath="/Script/Engine.MaterialExpressionMultiply'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionMultiply_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionOutput Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionOutput_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionFunctionInput Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant2Vector Name="MaterialExpressionConstant2Vector_2" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_2'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant2Vector Name="MaterialExpressionConstant2Vector_1" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_1'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant2Vector Name="MaterialExpressionConstant2Vector_0" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_0'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_8" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_8'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_7" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_7'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_6" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_6'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_5" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_5'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_4" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_4'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_3" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_3'"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialFunctionEditorOnlyData Name="M_4wayChaosEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:M_4wayChaosEditorOnlyData'"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0" ExportPath="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:SceneThumbnailInfoWithPrimitive_0'"
+   End Object
+   Begin Object Name="MaterialExpressionTime_0" ExportPath="/Script/Engine.MaterialExpressionTime'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTime_0'"
+      MaterialExpressionEditorX=-1728
+      MaterialExpressionEditorY=872
+      MaterialExpressionGuid=4F62022A49843D4FE4C12FB4E95C0756
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_6" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_6'"
+      Coordinates=(Expression="/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_3'")
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_0'")
+      MaterialExpressionEditorX=-1043
+      MaterialExpressionEditorY=568
+      MaterialExpressionGuid=FB3411BD42E051F78A788EB171FE7D05
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_4" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_4'"
+      Coordinates=(Expression="/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_2'")
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_0'")
+      MaterialExpressionEditorX=-1047
+      MaterialExpressionEditorY=391
+      MaterialExpressionGuid=CE0C2E6B4D10FB221F6315A8EF0DF3C7
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_2" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_2'"
+      Coordinates=(Expression="/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_1'")
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_0'")
+      MaterialExpressionEditorX=-1047
+      MaterialExpressionEditorY=206
+      MaterialExpressionGuid=C371F4FD4B80C7CCD2060D87B244C4F6
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_0" ExportPath="/Script/Engine.MaterialExpressionTextureSample'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureSample_0'"
+      Coordinates=(Expression="/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_0'")
+      TextureObject=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_0'")
+      MaterialExpressionEditorX=-1050
+      MaterialExpressionEditorY=17
+      MaterialExpressionGuid=C19540094B6E4A2DEF15CCABB43C458A
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureObject_0" ExportPath="/Script/Engine.MaterialExpressionTextureObject'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureObject_0'"
+      MaterialExpressionEditorX=-1523
+      MaterialExpressionEditorY=993
+      MaterialExpressionGuid=6C6FC8E04E409816B9386BA72ECC0789
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_0" ExportPath="/Script/Engine.MaterialExpressionTextureCoordinate'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionTextureCoordinate_0'"
+      MaterialExpressionEditorX=-1828
+      MaterialExpressionEditorY=-20
+      MaterialExpressionGuid=0D9B64FC4B280714BCBFD1845F7238B8
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionPanner_3" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_3'"
+      Coordinate=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_5'")
+      Time=(Expression="/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_2'")
+      SpeedX=0.100000
+      SpeedY=-0.100000
+      MaterialExpressionEditorX=-1258
+      MaterialExpressionEditorY=547
+      MaterialExpressionGuid=165D24ED453151964757BE8B7B5DB880
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionPanner_2" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_2'"
+      Coordinate=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_4'")
+      Time=(Expression="/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_2'")
+      SpeedX=-0.100000
+      SpeedY=0.100000
+      MaterialExpressionEditorX=-1258
+      MaterialExpressionEditorY=371
+      MaterialExpressionGuid=76B98441466A42E09D6DF29965647C0E
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionPanner_1" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_1'"
+      Coordinate=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_3'")
+      Time=(Expression="/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_2'")
+      SpeedX=-0.100000
+      SpeedY=-0.100000
+      MaterialExpressionEditorX=-1256
+      MaterialExpressionEditorY=197
+      MaterialExpressionGuid=1A93767047E8A7ECEE9D5483033B20E0
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionPanner_0" ExportPath="/Script/Engine.MaterialExpressionPanner'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionPanner_0'"
+      Coordinate=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_1'")
+      Time=(Expression="/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_2'")
+      SpeedX=0.100000
+      SpeedY=0.100000
+      MaterialExpressionEditorX=-1257
+      MaterialExpressionEditorY=23
+      MaterialExpressionGuid=2156C13A44D3C6BB0E64B783859C6BB9
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_3" ExportPath="/Script/Engine.MaterialExpressionMultiply'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionMultiply_3'"
+      A=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_8'")
+      B=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_4'")
+      MaterialExpressionEditorX=-436
+      MaterialExpressionEditorY=316
+      MaterialExpressionGuid=3CA4B6DD4272F10CC77B65934A61B47E
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_2" ExportPath="/Script/Engine.MaterialExpressionMultiply'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionMultiply_2'"
+      A=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_2'")
+      B=(Expression="/Script/Engine.MaterialExpressionTime'M_4wayChaos:MaterialExpressionTime_0'")
+      MaterialExpressionEditorX=-1510
+      MaterialExpressionEditorY=726
+      MaterialExpressionGuid=41E180AB4CAA17DBBCF2F98989581F6C
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionOutput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionOutput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionOutput_0'"
+      A=(Expression="/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_3'")
+      bLastPreviewed=True
+      Id=86A8532A4D53E96F911B8DA840667EB7
+      MaterialExpressionEditorX=-210
+      MaterialExpressionEditorY=327
+      MaterialExpressionGuid=561FAE3C43EB2C22DC203598470828AA
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_4" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_4'"
+      InputName="Divisor"
+      Description="How much to reduce the overall combined results of the 4 way add."
+      Id=55386161419E95B577AA499D5EA27E57
+      InputType=FunctionInput_Scalar
+      PreviewValue=(X=0.250000,Y=0.000000,Z=0.000000,W=1.000000)
+      bUsePreviewValueAsDefault=True
+      MaterialExpressionEditorX=-605
+      MaterialExpressionEditorY=511
+      MaterialExpressionGuid=2252EE13453F785288656FA7C156FAE4
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_2" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_2'"
+      InputName="Speed"
+      Id=63E2A1CE4696FA319E81D28F5E41E451
+      InputType=FunctionInput_Scalar
+      PreviewValue=(X=1.000000,Y=0.000000,Z=0.000000,W=1.000000)
+      bUsePreviewValueAsDefault=True
+      MaterialExpressionEditorX=-1728
+      MaterialExpressionEditorY=708
+      MaterialExpressionGuid=518B78BB4D5C916C83B65FAA9B8821D8
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_1" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_1'"
+      Preview=(Expression="/Script/Engine.MaterialExpressionTextureCoordinate'M_4wayChaos:MaterialExpressionTextureCoordinate_0'")
+      InputName="Coordinates"
+      Id=694A8C7B4818A79CBAB5FCAF787F64AB
+      InputType=FunctionInput_Vector2
+      bUsePreviewValueAsDefault=True
+      MaterialExpressionEditorX=-1512
+      MaterialExpressionEditorY=-22
+      MaterialExpressionGuid=5852437F47F5B8ACFD2ECCB27EEEA10A
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionFunctionInput_0" ExportPath="/Script/Engine.MaterialExpressionFunctionInput'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionFunctionInput_0'"
+      Preview=(Expression="/Script/Engine.MaterialExpressionTextureObject'M_4wayChaos:MaterialExpressionTextureObject_0'")
+      InputName="Texture"
+      Id=34D7522A455D90B04EE02E800E1C866D
+      InputType=FunctionInput_Texture2D
+      SortPriority=1
+      MaterialExpressionEditorX=-1230
+      MaterialExpressionEditorY=993
+      MaterialExpressionGuid=EE21845A49D6013CE65814B9B2EEC8A6
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionConstant2Vector_2" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_2'"
+      R=0.651340
+      G=0.751638
+      MaterialExpressionEditorX=-1736
+      MaterialExpressionEditorY=538
+      MaterialExpressionGuid=6F34579E4DC0E3756087798D227087F2
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionConstant2Vector_1" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_1'"
+      R=0.864861
+      G=0.148384
+      MaterialExpressionEditorX=-1738
+      MaterialExpressionEditorY=363
+      MaterialExpressionGuid=73C3095B413C141C2568E6BB45767EED
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionConstant2Vector_0" ExportPath="/Script/Engine.MaterialExpressionConstant2Vector'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionConstant2Vector_0'"
+      R=0.418100
+      G=0.354800
+      MaterialExpressionEditorX=-1740
+      MaterialExpressionEditorY=187
+      MaterialExpressionGuid=EA5E2F7E4BBBEDE3BB774998FBF826D8
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_8" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_8'"
+      A=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_6'")
+      B=(Expression="/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_7'")
+      MaterialExpressionEditorX=-662
+      MaterialExpressionEditorY=312
+      MaterialExpressionGuid=DCA8D39C44E91038F13F5CAC79BFD253
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_7" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_7'"
+      A=(Expression="/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_4'",Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      B=(Expression="/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_6'",Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      MaterialExpressionEditorX=-846
+      MaterialExpressionEditorY=440
+      MaterialExpressionGuid=C2B380274BC98248C0F8219586A2E48A
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_6" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_6'"
+      A=(Expression="/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_0'",Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      B=(Expression="/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_2'",Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      MaterialExpressionEditorX=-842
+      MaterialExpressionEditorY=141
+      MaterialExpressionGuid=46BEE44B4392C1C26267459406F95DF6
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_5" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_5'"
+      A=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_1'")
+      B=(Expression="/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_2'")
+      MaterialExpressionEditorX=-1512
+      MaterialExpressionEditorY=546
+      MaterialExpressionGuid=7F56A8124EF90AA0FC470CABC33EE8CE
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_4" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_4'"
+      A=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_1'")
+      B=(Expression="/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_1'")
+      MaterialExpressionEditorX=-1513
+      MaterialExpressionEditorY=358
+      MaterialExpressionGuid=FC2726A84BC5D2A5B821D99D84F8521E
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_3" ExportPath="/Script/Engine.MaterialExpressionAdd'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:MaterialExpressionAdd_3'"
+      A=(Expression="/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_1'")
+      B=(Expression="/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_0'")
+      MaterialExpressionEditorX=-1511
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=28296F7E4E9D3E505A163591150D15DF
+      Function="/Script/Engine.MaterialFunction'M_4wayChaos'"
+   End Object
+   Begin Object Name="M_4wayChaosEditorOnlyData" ExportPath="/Script/Engine.MaterialFunctionEditorOnlyData'/Game/FantasyBundle/Materials/M_4wayChaos.M_4wayChaos:M_4wayChaosEditorOnlyData'"
+      ExpressionCollection=(Expressions=("/Script/Engine.MaterialExpressionFunctionOutput'M_4wayChaos:MaterialExpressionFunctionOutput_0'","/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_0'","/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_2'","/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_4'","/Script/Engine.MaterialExpressionTextureSample'M_4wayChaos:MaterialExpressionTextureSample_6'","/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_0'","/Script/Engine.MaterialExpressionTextureObject'M_4wayChaos:MaterialExpressionTextureObject_0'","/Script/Engine.MaterialExpressionTextureCoordinate'M_4wayChaos:MaterialExpressionTextureCoordinate_0'","/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_1'","/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_0'","/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_1'","/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_2'","/Script/Engine.MaterialExpressionPanner'M_4wayChaos:MaterialExpressionPanner_3'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_3'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_4'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_5'","/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_0'","/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_1'","/Script/Engine.MaterialExpressionConstant2Vector'M_4wayChaos:MaterialExpressionConstant2Vector_2'","/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_2'","/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_2'","/Script/Engine.MaterialExpressionTime'M_4wayChaos:MaterialExpressionTime_0'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_6'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_7'","/Script/Engine.MaterialExpressionAdd'M_4wayChaos:MaterialExpressionAdd_8'","/Script/Engine.MaterialExpressionMultiply'M_4wayChaos:MaterialExpressionMultiply_3'","/Script/Engine.MaterialExpressionFunctionInput'M_4wayChaos:MaterialExpressionFunctionInput_4'"))
+   End Object
+   Description="4-way diagonal motion"
+   LibraryCategoriesText(1)=NSLOCTEXT("", "749E0E00490CAE4CE91C798F7AA5E6EA", "ComplexMotion")
+   EditorOnlyData="/Script/Engine.MaterialFunctionEditorOnlyData'M_4wayChaosEditorOnlyData'"
+   StateId=5841C8D34A81917A5856D88526E72DF5
+   CombinedInputTypes=31
+   CombinedOutputTypes=15
+   ThumbnailInfo="/Script/UnrealEd.SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'"
+End Object
