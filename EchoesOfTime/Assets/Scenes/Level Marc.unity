@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 94e36645afd22b040954e7d8e42950b0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1040,6 +1040,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -25.910004
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d7a0ce2af97eae40afd858e33589cb3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d7a0ce2af97eae40afd858e33589cb3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d7a0ce2af97eae40afd858e33589cb3, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d7a0ce2af97eae40afd858e33589cb3, type: 3}
       propertyPath: m_Name
       value: SM_WallArch06 (1)
@@ -1722,6 +1734,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 118.546
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcbaa451fc7ebb1448af90a01348fb7a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: bcbaa451fc7ebb1448af90a01348fb7a, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle01 (1)
@@ -1791,6 +1807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 112.286
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01
@@ -3663,6 +3683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 278.08002
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (3)
@@ -3874,6 +3898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (3)
@@ -4599,6 +4627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -68.575
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (6)
@@ -5552,6 +5584,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.924
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 068330e4f883f364aba5e600b227f99c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71890afe68297544abc30acefb043439, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 068330e4f883f364aba5e600b227f99c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 068330e4f883f364aba5e600b227f99c, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
     - target: {fileID: 919132149155446097, guid: 068330e4f883f364aba5e600b227f99c, type: 3}
       propertyPath: m_Name
       value: SM_WallArch05
@@ -6204,10 +6248,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 140.579
       objectReference: {fileID: 0}
+    - target: {fileID: -3714014127140458465, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
     - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_LOD0_uk3ndfyga (06)
       objectReference: {fileID: 0}
+    - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
+    - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35256b13e2f73c04989b3c5f31cedfd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6444,6 +6500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (11)
@@ -6879,6 +6939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 126.494
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b07e5ad8017e3404ebdddf9f9c5be83f, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (10)
@@ -7245,6 +7309,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 215.199
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (5)
@@ -9528,10 +9596,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3714014127140458465, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_LOD0_uk3ndfyga (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
+    - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9723,6 +9803,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 132.774
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fc208851991fc8248b0d48034446019b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: fc208851991fc8248b0d48034446019b, type: 3}
       propertyPath: m_Name
       value: SM_Stone14 (20)
@@ -10212,6 +10296,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -63.415
       objectReference: {fileID: 0}
+    - target: {fileID: -4003406778267746347, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bee067e3df297d4e9513cc33a393b43, type: 2}
+    - target: {fileID: -2445225976873494861, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bee067e3df297d4e9513cc33a393b43, type: 2}
     - target: {fileID: 919132149155446097, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_Formation_LOD0_vd4iecjva
@@ -10220,6 +10312,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5543093104909968248, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bee067e3df297d4e9513cc33a393b43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10598,6 +10694,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 106.101
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fc208851991fc8248b0d48034446019b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: fc208851991fc8248b0d48034446019b, type: 3}
       propertyPath: m_Name
       value: SM_Stone14 (01)
@@ -11106,6 +11206,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.204
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b07e5ad8017e3404ebdddf9f9c5be83f, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (1)
@@ -11797,6 +11901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3834423413225423899, guid: 59759071b71de904791d0b06abbff442, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: 59759071b71de904791d0b06abbff442, type: 3}
       propertyPath: m_Name
       value: S_Nordic_Coastal_Cliff_ulejebpfa_high (8)
@@ -13639,6 +13747,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 200.088
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (14)
@@ -15174,7 +15286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 177.12303
+      value: 182.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15204,6 +15316,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.648
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (8)
@@ -15403,6 +15519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 101.915
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (4)
@@ -15692,10 +15812,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3714014127140458465, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_LOD0_uk3ndfyga (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
+    - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16563,6 +16695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -36.704
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (8)
@@ -18216,6 +18352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 309.76
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (9)
@@ -19208,6 +19348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -49.584
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b07e5ad8017e3404ebdddf9f9c5be83f, type: 2}
     - target: {fileID: 919132149155446097, guid: 90be2caaf0178944eaf943e949bf59b1, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle02 (2)
@@ -19334,6 +19478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fc208851991fc8248b0d48034446019b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: fc208851991fc8248b0d48034446019b, type: 3}
       propertyPath: m_Name
       value: SM_Stone14 (18)
@@ -19590,10 +19738,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -93.665
       objectReference: {fileID: 0}
+    - target: {fileID: -4003406778267746347, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
+    - target: {fileID: -2445225976873494861, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_Formation_LOD0_vd4iecjva (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5543093104909968248, guid: d5266d07b55a6914f88e06ba319579b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20330,6 +20490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 44.724
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcbaa451fc7ebb1448af90a01348fb7a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: bcbaa451fc7ebb1448af90a01348fb7a, type: 3}
       propertyPath: m_Name
       value: SM_RockCastle01
@@ -21060,6 +21224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -276.063
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b07e5ad8017e3404ebdddf9f9c5be83f, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (6)
@@ -21133,6 +21301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S_Quarry_Cliff_ub3sahcda_high (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1592261618610655756, guid: b3bef5c6e7c8f134c8365b32a6a587d1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21312,6 +21484,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -125.586
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71890afe68297544abc30acefb043439, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (4)
@@ -22533,6 +22709,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fc208851991fc8248b0d48034446019b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: fc208851991fc8248b0d48034446019b, type: 3}
       propertyPath: m_Name
       value: SM_Stone14 (17)
@@ -24257,6 +24437,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 283456896fe490045a56e3f830a4939f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71890afe68297544abc30acefb043439, type: 2}
     - target: {fileID: 919132149155446097, guid: 283456896fe490045a56e3f830a4939f, type: 3}
       propertyPath: m_Name
       value: SM_EntranceLargePillar06
@@ -24326,6 +24510,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 100616f2f8a743245bdd7ab93b15c6b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 100616f2f8a743245bdd7ab93b15c6b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 100616f2f8a743245bdd7ab93b15c6b1, type: 3}
       propertyPath: m_Name
       value: SM_EntranceLargePillar02
@@ -24729,7 +24921,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705331269}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -26253,6 +26445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5841798595259673149, guid: 21a86cc131a28d7458e2855c330dd732, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: 21a86cc131a28d7458e2855c330dd732, type: 3}
       propertyPath: m_Name
       value: S_Canyon_Sandstone_Cliff_Base_ulqtdhd_high
@@ -27234,6 +27430,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7424788244000617947, guid: 13da04820c629044db107f59e6f574aa, type: 3}
+--- !u!1 &1859319419
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859319421}
+  - component: {fileID: 1859319420}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859319420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859319419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
+  m_StaticLightingSkyUniqueID: 0
+  m_StaticLightingCloudsUniqueID: 0
+  m_StaticLightingVolumetricClouds: 0
+  bounces: 1
+--- !u!4 &1859319421
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859319419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1863527105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27703,7 +27948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 176.58331
+      value: 180.564
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27733,6 +27978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -102.019
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71890afe68297544abc30acefb043439, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (7)
@@ -27928,6 +28177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 10.524994
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (2)
@@ -28485,6 +28738,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -51.758
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a0974e84a2db9043be4a217d94f60cd, type: 3}
       propertyPath: m_Name
       value: SM_Rock02 (5)
@@ -30893,10 +31150,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3714014127140458465, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     - target: {fileID: 919132149155446097, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
       propertyPath: m_Name
       value: Nordic_Beach_Rock_LOD0_uk3ndfyga (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4864414742857582322, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
+    - target: {fileID: 6456007172246455316, guid: d0511647904f4314ab14e4c4c0c5ea41, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aac042cc2cda0d64bb6634f4488f7bae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31657,6 +31926,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 116.379
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 36101afa63140814b991c7e4f114727f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da235bbacfc2810499c0208fac93a81a, type: 2}
     - target: {fileID: 919132149155446097, guid: 36101afa63140814b991c7e4f114727f, type: 3}
       propertyPath: m_Name
       value: SM_Stone01 (14)
@@ -32021,7 +32294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 178.5804
+      value: 179.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32051,6 +32324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -66.467
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 884fc79720cb4ed45a86082973d417d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a6e6902a5a433f47baba0bffbae505f, type: 3}
       propertyPath: m_Name
       value: SM_Rock01 (15)
@@ -32812,3 +33089,4 @@ SceneRoots:
   - {fileID: 359962259}
   - {fileID: 1128971278}
   - {fileID: 945105998}
+  - {fileID: 1859319421}
