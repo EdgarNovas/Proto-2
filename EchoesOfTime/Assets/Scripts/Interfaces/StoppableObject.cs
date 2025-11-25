@@ -19,7 +19,8 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
         Right,
         Left,
         Up,
-        Down
+        Down,
+        None
     }
 
     void Awake()
@@ -48,6 +49,9 @@ public class StoppableObject : MonoBehaviour, ITimeStoppable
                 break;
             case TravelDirection.Down:
                 directionToGo = -transform.up;
+                break;
+            case TravelDirection.None:
+                directionToGo = Vector3.zero;
                 break;
             default:
                 directionToGo = transform.forward;

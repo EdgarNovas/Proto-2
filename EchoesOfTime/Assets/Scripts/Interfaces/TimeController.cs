@@ -95,7 +95,22 @@ public class TimeController : MonoBehaviour
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        
+        Transform originTransform = mainCamera != null ? mainCamera.transform : Camera.main.transform;
+
+        
+        Debug.Log($"Raycast lanzado desde el objeto: {originTransform.gameObject.name}");
+
+        
+        Vector3 origin = originTransform.position;
+        Vector3 direction = originTransform.forward;
+
+        Ray ray = new Ray(origin, direction);
+
+        
+        Debug.DrawRay(origin, direction * raycastDistance, Color.red, 2.0f);
+
+
 
        
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);

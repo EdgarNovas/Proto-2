@@ -6,14 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: e3fb0dfd36f4a774e91ddeda96cbd92e
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 7963e02157301f649a89cfbdd838496c
+  - enabled: 1
+    path: Assets/Scenes/OutdoorsScene.unity
+    guid: 81b8537cfd47e7149880074a50e5df41
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 56331e9de203c79429c7968ecc354f82
   - enabled: 1
-    path: Assets/Scenes/OutdoorsScene.unity
-    guid: 81b8537cfd47e7149880074a50e5df41
+    path: Assets/Scenes/GameOver.unity
+    guid: 9e5b696e551112c469a42fd1952e2214
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: a50497ccb634dcd4c80645e587dd1939
   - enabled: 0
     path: Assets/EdgarScene.unity
     guid: c220f17e03fb6aa48b3ac78c17ca9a40
