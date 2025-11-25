@@ -3,7 +3,12 @@ guid: 87536f78b6d38904aae77499a8b9e1c2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Tracks
+    second: {fileID: 2100000, guid: 94e6e14ca65dc8842b36c239eb000159, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

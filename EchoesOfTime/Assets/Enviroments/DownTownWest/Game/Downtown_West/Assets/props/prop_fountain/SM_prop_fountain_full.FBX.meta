@@ -3,7 +3,62 @@ guid: 13158d611dd87404bbd3b75a057c4558
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Dolphin
+    second: {fileID: 2100000, guid: 421b8ce953849c04698c3969b53485ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Dolphin2
+    second: {fileID: 2100000, guid: d9d600b4019da7b4fa644f617ef75acd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Platform_Bottom
+    second: {fileID: 2100000, guid: 4381abd783db8bd4ca112c562d18c690, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Platform_Pillar
+    second: {fileID: 2100000, guid: d8c4dce40d1caa34a997fbb95a15eb0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Shell_Bottom
+    second: {fileID: 2100000, guid: 85f9c896d8a438542b8b363cb2f88c6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Shell_Top
+    second: {fileID: 2100000, guid: 8ecc14d18559b2c479a897ea542e0aa2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_Statue
+    second: {fileID: 2100000, guid: 31796bcca8c5dd04fae627b21668fb40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_WaterBasin_A
+    second: {fileID: 2100000, guid: 637377f4fdcefc84db986b6a5e466111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_WaterBasin_B
+    second: {fileID: 2100000, guid: a88c324e558e85d4db59181115067f64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_WaterBasin_Bottom
+    second: {fileID: 2100000, guid: 1ced60c3bdc6795479f8fb2652873cc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fount_WaterBasin_Plaq
+    second: {fileID: 2100000, guid: 0bf58686e1fd49a41b590bf46c412ee0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

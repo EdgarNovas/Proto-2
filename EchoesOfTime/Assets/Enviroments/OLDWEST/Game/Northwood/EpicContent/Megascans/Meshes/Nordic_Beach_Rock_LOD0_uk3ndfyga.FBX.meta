@@ -3,7 +3,12 @@ guid: d0511647904f4314ab14e4c4c0c5ea41
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Nordic_Beach_Rock_01a
+    second: {fileID: 2100000, guid: 81971791e3cd98b46bdcdb69be576b2c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
