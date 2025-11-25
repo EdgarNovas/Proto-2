@@ -798,25 +798,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81aedef9c9672740bbef7fed14a342d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScrollSpeed: 1
-  text: 'Hola
-
-    Como estas
-
-
-
-
-
-
-
-
-
-
-
-
-
-    a'
+  textScrollSpeed: 0.2
+  text: "\n\n\n\n\n\n\n\n\nEn un futuro donde los teletransportadores forman parte
+    de la vida diaria, los fallos no solo desv\xEDan rutas: env\xEDan personas y
+    objetos a las Grietas Temporales, lugares donde se mezclan \xE9pocas, mundos
+    y realidades imposibles.\r\n\r\nT\xFA eres uno de esos desafortunados\u2026 o
+    afortunados. Ahora exploras este caos dimensional mientras transmites cada paso
+    a tu audiencia. Fue aqu\xED donde encontraste el Reloj del Tiempo, un artefacto
+    capaz de alterar el flujo temporal y abrirte camino entre peligros que desaf\xEDan
+    toda l\xF3gica.\r\n\r\nCon tu c\xE1mara encendida y el reloj en tu mano, te preparas
+    para adentrarte una vez m\xE1s en la Grieta. Lo que descubras all\xED podr\xEDa
+    cambiarlo todo."
   displayText: {fileID: 803908421}
+  introDuration: 60
 --- !u!4 &1368069487
 Transform:
   m_ObjectHideFlags: 0

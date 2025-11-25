@@ -20,6 +20,6 @@ public class IntroManager : MonoBehaviour
         displayText.rectTransform.localPosition += Vector3.up * textScrollSpeed;
 
         introDuration -= Time.deltaTime;
-        if (introDuration <= 0) SceneManager.LoadScene("Room");
+        if (introDuration <= 0) SceneManager.LoadScene("Scenes/OutdoorsScene");
     }
 }
