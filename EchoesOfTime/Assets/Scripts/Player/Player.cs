@@ -70,13 +70,13 @@ public class Player : MonoBehaviour
         CheckpointManager.Instance.player = this;
         CheckpointManager.Instance.Respawn();
 
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         CheckForWall();
         IsWallRunning();
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         // 1. Coger el input vertical (Mouse Y)
         Vector2 rotateVector = inputReader.LookVector;
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         AddForces(); 
         
