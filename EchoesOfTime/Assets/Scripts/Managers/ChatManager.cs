@@ -37,7 +37,7 @@ public class ChatManager : MonoBehaviour
 
     void Start()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(this.gameObject);
             return;
@@ -53,15 +53,15 @@ public class ChatManager : MonoBehaviour
         if (isBursting) curBurstDuration += Time.deltaTime;
         UpdateLifespans();
 
-        if(curBurstDuration > burstDuration)
+        if (curBurstDuration > burstDuration)
         {
             isBursting = false;
         }
 
-        if(nextMessageDelay <= 0)
+        if (nextMessageDelay <= 0)
         {
-            currentMessages.Enqueue((isBursting) 
-                ? chatData.GetMessage(burstEmotion) 
+            currentMessages.Enqueue((isBursting)
+                ? chatData.GetMessage(burstEmotion)
                 : chatData.GetMessage(ChatData.Emotion.NONE)
                 );
             currentMessagesLife.Enqueue(messageLifespan);
@@ -73,7 +73,7 @@ public class ChatManager : MonoBehaviour
 
         UpdateText();
 
-        while(currentMessages.Count > maxMessageCount)
+        while (currentMessages.Count > maxMessageCount)
         {
             currentMessages.Dequeue();
             currentMessagesLife.Dequeue();
@@ -100,7 +100,7 @@ public class ChatManager : MonoBehaviour
     private void UpdateText()
     {
         chatUI.text = "";
-        foreach(var message in currentMessages)
+        foreach (var message in currentMessages)
         {
             chatUI.text += $"<color=#{message.Item1.Color.ToHexString()}>{message.Item1.Name}</color> {message.Item2}\n";
         }
