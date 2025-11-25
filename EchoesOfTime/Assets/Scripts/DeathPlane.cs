@@ -19,6 +19,6 @@ public class DeathPlane : MonoBehaviour
     {
         if (!other.TryGetComponent(out Player player)) return;
 
-        SceneManager.LoadScene("GameOver");
+        CheckpointManager.Instance.Respawn();
     }
 }
