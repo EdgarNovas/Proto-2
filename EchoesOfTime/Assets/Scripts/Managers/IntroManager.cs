@@ -17,6 +17,10 @@ public class IntroManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Scenes/OutdoorsScene");
+        }
         displayText.rectTransform.localPosition += Vector3.up * textScrollSpeed;
 
         introDuration -= Time.deltaTime;

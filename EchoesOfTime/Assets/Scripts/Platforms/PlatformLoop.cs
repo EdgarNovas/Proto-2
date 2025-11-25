@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PlatformLoop : MonoBehaviour, ITimeReversible
+public class PlatformLoop : MonoBehaviour, ITimeReversible,ITimeStoppable
 {
 
     [SerializeField] private Vector3 startPos;
@@ -16,6 +16,8 @@ public class PlatformLoop : MonoBehaviour, ITimeReversible
     [SerializeField] float dissolveSpeed = 2f;
     bool teleporting = false;
 
+    bool isStopped = false;
+
     public bool IsRewinding { get; set; }
 
     private void Start()
@@ -25,6 +27,10 @@ public class PlatformLoop : MonoBehaviour, ITimeReversible
 
     void Update()
     {
+        if (isStopped)
+        {
+            return;
+        }
         if (teleporting) return;
         t += (IsRewinding) ? -speed * Time.deltaTime : speed * Time.deltaTime;
         transform.position = t * endPos + (1 - t) * startPos;
@@ -73,5 +79,10 @@ public class PlatformLoop : MonoBehaviour, ITimeReversible
     public void StopRewind()
     {
         IsRewinding = false;
+    }
+
+    public void ToggleFreeze()
+    {
+        isStopped = !isStopped;
     }
 }

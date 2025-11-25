@@ -18,7 +18,7 @@ public class DeathPlane : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.TryGetComponent(out Player player)) return;
-
+        TimeManager.Instance.AddTime(1);
         CheckpointManager.Instance.Respawn();
     }
 }

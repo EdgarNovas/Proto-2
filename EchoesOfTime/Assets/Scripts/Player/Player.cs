@@ -198,6 +198,7 @@ public class Player : MonoBehaviour
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
             AudioManager.instance.sfxSource.loop = false;
             AudioManager.instance.PlaySFX("Jump");
+            TimeManager.Instance.AddTime(2);
         }
         else if (coyoteTimeCounter > 0f)
         {
