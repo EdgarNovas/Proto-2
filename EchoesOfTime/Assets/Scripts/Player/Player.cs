@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] float groundRaycastLenght = .2f;
 
     #endregion
+    [SerializeField]DynamicCrosshair crosshair;
 
     [Header("Coyote Time")]
     [SerializeField] float coyoteTimeDuration = 0.15f; // 0.15 segundos
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        
 
         
 
@@ -70,13 +72,13 @@ public class Player : MonoBehaviour
         CheckpointManager.Instance.player = this;
         CheckpointManager.Instance.Respawn();
 
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         CheckForWall();
         IsWallRunning();
@@ -85,6 +87,15 @@ public class Player : MonoBehaviour
         {
             // Si estamos en el suelo, reiniciamos el contador
             coyoteTimeCounter = coyoteTimeDuration;
+            if(inputReader.MoveVector.sqrMagnitude > 0f)
+            {
+                AudioManager.instance.sfxSource.loop = true;
+                AudioManager.instance.PlaySFX("Run");
+            } else if(AudioManager.instance.curSFX == "Run")
+            {
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.StopSFX();
+            }
         }
         else
         {
@@ -96,22 +107,17 @@ public class Player : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log(transform.position);
 
-        // 1. Coger el input vertical (Mouse Y)
         Vector2 rotateVector = inputReader.LookVector;
         float verticalInput = rotateVector.y;
 
-        // 2. Calcular y acumular la rotación X (vertical)
-        // Es -= porque el input 'Y' del ratón suele estar invertido
+
         verticalCameraRotation -= verticalInput * rotationSpeed * Time.deltaTime;
 
-        // 3. Limitar (clamp) la rotación vertical para no dar la vuelta
+      
         verticalCameraRotation = Mathf.Clamp(verticalCameraRotation, -90f, 90f);
 
-        // 4. Aplicar TODAS las rotaciones a la cámara
-        // Usamos 'camTrans' (tu variable de cámara)
-        // Usamos localRotation para que rote relativo al jugador
+       
         camTrans.localRotation = Quaternion.Euler(
             verticalCameraRotation, // Rotación X (arriba/abajo)
             0,                      // Rotación Y (la maneja el cuerpo del jugador)
@@ -121,7 +127,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         AddForces(); 
         
@@ -188,12 +194,16 @@ public class Player : MonoBehaviour
                 magnitudeJump = rb.linearVelocity.magnitude;
             }
 
-
+            crosshair.Pulse();
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
         }
         else if (coyoteTimeCounter > 0f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
 
             coyoteTimeCounter = 0f;
         }
@@ -215,9 +225,9 @@ public class Player : MonoBehaviour
     private void CheckForWall()
     {
         isGrounded = Physics.Raycast(transform.position, -transform.up, groundRaycastLenght, groundMask);
-        //isWallLeft = Physics.CheckBox(leftWallCheck.position, new Vector3(0.2f, 0.7f, 0.4f), Quaternion.identity, isWallGroundMask);
+        
         isWallLeft = Physics.Raycast(transform.position, -transform.right, out leftWallHit, raycastLenght, isWallGroundMask);
-        //isWallRight = Physics.CheckBox(rightWallCheck.position, new Vector3(0.2f, 0.7f, 0.4f), Quaternion.identity, isWallGroundMask);
+        
         isWallRight = Physics.Raycast(transform.position, transform.right, out rightWallHit, raycastLenght, isWallGroundMask);
     }
 

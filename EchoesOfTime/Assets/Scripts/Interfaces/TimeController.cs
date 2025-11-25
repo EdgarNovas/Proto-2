@@ -8,8 +8,17 @@ public class TimeController : MonoBehaviour
     [SerializeField] private float sphereCastRadius = 3f;
     [SerializeField] private LayerMask hitMask;
 
-    
+    [Header("VFX")]
+    [SerializeField] ArcVFXController arcVFX;
+
+
     private ITimeReversible currentReversible;
+
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }
 
     void LateUpdate()
     {
@@ -25,7 +34,12 @@ public class TimeController : MonoBehaviour
             TryRaycastAndExecute(hit =>
             {
                 if (hit.collider.TryGetComponent<ITimeStoppable>(out var stoppable))
+                {
                     stoppable.ToggleFreeze();
+                    AudioManager.instance.sfxSource.loop = false;
+                    AudioManager.instance.PlaySFX("StopTime");
+                    ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
+                }
             });
         }
 
@@ -42,6 +56,9 @@ public class TimeController : MonoBehaviour
                         reversible.StartRewind();
                         currentReversible = reversible; 
                         TimeManager.Instance.AddTime(10);
+                        AudioManager.instance.sfxSource.loop = false;
+                        AudioManager.instance.PlaySFX("ReverseTime");
+                        ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
                     }
                 });
             }
@@ -56,12 +73,15 @@ public class TimeController : MonoBehaviour
 
        if(Input.GetKeyDown(KeyCode.V))
         {
-            Debug.Log("Check");
+            
             TryRaycastAndExecute(hit =>
             {
                 if (!hit.collider.TryGetComponent(out ITimeExplodable explodable)) return;
 
                 Debug.Log("boom");
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.PlaySFX("ExplodeTime");
+                ChatManager.Instance.MessageBurst(ChatData.Emotion.EXCITED);
 
                 explodable.Explode(this.GetComponent<Player>());
             }
@@ -75,16 +95,18 @@ public class TimeController : MonoBehaviour
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
-        Ray ray = mainCamera.ScreenPointToRay(
-     new Vector3(Screen.width / 2, Screen.height / 2)
-   );
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
        
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
-        
 
-        if (Physics.SphereCast(ray,2, out RaycastHit hit, raycastDistance, hitMask))
+
+        if (Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, raycastDistance, hitMask))
         {
+            if (arcVFX != null)
+            {
+                arcVFX.FireArc(hit.point);
+            }
 
             onHit?.Invoke(hit);
         }

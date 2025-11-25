@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PlatformLoop : MonoBehaviour
+public class PlatformLoop : MonoBehaviour, ITimeReversible
 {
 
-    public float alturaMax = 5f;     
-    public float alturaMin = 0f;
+    [SerializeField] private Vector3 startPos;
+    [SerializeField] private Vector3 endPos;
+    [SerializeField, Range(0, 1)] private float t;
+
     public float speed = 3f;
 
     [Header("Shader")]
@@ -14,39 +16,62 @@ public class PlatformLoop : MonoBehaviour
     [SerializeField] float dissolveSpeed = 2f;
     bool teleporting = false;
 
+    public bool IsRewinding { get; set; }
+
+    private void Start()
+    {
+        IsRewinding = false;
+    }
+
     void Update()
     {
         if (teleporting) return;
-        transform.position += Vector3.up * speed * Time.deltaTime;
-        if (transform.position.y >= alturaMax)
+        t += (IsRewinding) ? -speed * Time.deltaTime : speed * Time.deltaTime;
+        transform.position = t * endPos + (1 - t) * startPos;
+        if (t >= 1)
         {
-            StartCoroutine(DissolveYTeleport());
+            t = 0;
+            StartCoroutine(Dissolve());
+        }
+        else if (t < 0)
+        {
+            t = 1;
+            StartCoroutine(Dissolve());
         }
 
-        IEnumerator DissolveYTeleport()
+        IEnumerator Dissolve()
         {
             teleporting=true;
-            float t = 0f;
-            while(t < 1f)
+            float s = 0f;
+            while(s < 1f)
             {
-                t += Time.deltaTime * dissolveSpeed;
-                mat.SetFloat(propertyChange, t);
+                s += Time.deltaTime * dissolveSpeed;
+                mat.SetFloat(propertyChange, s);
                 yield return null;
             }
 
-            Vector3 pos = transform.position;
-            pos.y = alturaMin;
-            transform.position = pos;
 
-            t = 1f;
-            while (t > 0f)
+            transform.position = t * endPos + (1 - t) * startPos;
+
+            s = 1f;
+            while (s > 0f)
             {
-                t -= Time.deltaTime * dissolveSpeed;
-                mat.SetFloat(propertyChange, t);
+                s -= Time.deltaTime * dissolveSpeed;
+                mat.SetFloat(propertyChange, s);
                 yield return null;
             }
 
             teleporting = false;
         }
+    }
+
+    public void StartRewind()
+    {
+        IsRewinding = true;
+    }
+
+    public void StopRewind()
+    {
+        IsRewinding = false;
     }
 }
