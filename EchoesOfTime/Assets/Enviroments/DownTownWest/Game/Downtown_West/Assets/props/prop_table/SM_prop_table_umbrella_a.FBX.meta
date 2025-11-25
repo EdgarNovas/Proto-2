@@ -3,7 +3,12 @@ guid: ed29b975a30cde44e91a74762f1643a9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_prop_umbrella_blue
+    second: {fileID: 2100000, guid: 29af136e728551d4b987f1cae4e46c59, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
