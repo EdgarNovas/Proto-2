@@ -9,6 +9,11 @@ EditorBuildSettings:
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
   - enabled: 1
+    path: Assets/EdgarScene.unity
+    guid: c220f17e03fb6aa48b3ac78c17ca9a40
+  - enabled: 1
+    path: Assets/HOLE.unity
+    guid: 784ffeee338acf94da1044ccbe5404b6
     path: Assets/Scenes/GameOver.unity
     guid: 9e5b696e551112c469a42fd1952e2214
   m_configObjects:

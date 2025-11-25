@@ -25,7 +25,11 @@ public class TimeController : MonoBehaviour
             TryRaycastAndExecute(hit =>
             {
                 if (hit.collider.TryGetComponent<ITimeStoppable>(out var stoppable))
+                {
                     stoppable.ToggleFreeze();
+                    AudioManager.instance.sfxSource.loop = false;
+                    AudioManager.instance.PlaySFX("StopTime");
+                }
             });
         }
 
@@ -42,6 +46,8 @@ public class TimeController : MonoBehaviour
                         reversible.StartRewind();
                         currentReversible = reversible; 
                         TimeManager.Instance.AddTime(10);
+                        AudioManager.instance.sfxSource.loop = false;
+                        AudioManager.instance.PlaySFX("ReverseTime");
                     }
                 });
             }
@@ -62,6 +68,8 @@ public class TimeController : MonoBehaviour
                 if (!hit.collider.TryGetComponent(out ITimeExplodable explodable)) return;
 
                 Debug.Log("boom");
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.PlaySFX("ExplodeTime");
 
                 explodable.Explode(this.GetComponent<Player>());
             }
