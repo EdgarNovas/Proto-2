@@ -20934,13 +20934,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.056
       objectReference: {fileID: 0}
+    - target: {fileID: -8230200959918443319, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8007435369532285477, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2423159977737720792, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_Name
       value: SM_MillRoofShed_Roof_01a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023016340896367445, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_Size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932100299650664148, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770965108468067358, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8770965108468067358, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_IsActive
@@ -22811,13 +22839,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.056
       objectReference: {fileID: 0}
+    - target: {fileID: -8230200959918443319, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8007435369532285477, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2423159977737720792, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_Name
       value: SM_MillRoofShed_Roof_01a
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023016340896367445, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_Size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932100299650664148, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770965108468067358, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8770965108468067358, guid: 45abf10d79b364b4ebdd053fbe17d400, type: 3}
       propertyPath: m_IsActive
@@ -26479,7 +26535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262337373}
   - component: {fileID: 1262337372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28251,7 +28307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1370923593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29223,13 +29279,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 3.637
       objectReference: {fileID: 0}
+    - target: {fileID: -8016628427510462557, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5559006687037087922, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1455263308499789613, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 279729169530368407, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
       propertyPath: m_Name
       value: SM_MillFloor_02a
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 997059031258011742, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
       propertyPath: m_Size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897123983877412335, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8897123983877412335, guid: 1e3a772f28741854791b46a69c2ca1eb, type: 3}
       propertyPath: m_IsActive
@@ -33012,6 +33096,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 8
+  arcVFX: {fileID: 0}
 --- !u!114 &1605650454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33050,6 +33135,7 @@ MonoBehaviour:
     m_Bits: 64
   raycastLenght: 1
   groundRaycastLenght: 1.2
+  crosshair: {fileID: 0}
   coyoteTimeDuration: 0.15
   camTrans: {fileID: 776844699}
   camMove: {fileID: 776844699}
@@ -35245,8 +35331,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 8eb160e0169a54146af5f317a191dd8d, type: 3}
   - Name: Teleport
     Clip: {fileID: 8300000, guid: e2858d21926a5ef4c90bd41a2e0ac945, type: 3}
-  musicSource: {fileID: 141208057}
-  sfxSource: {fileID: 1515927150}
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
   curMusic: 
   curSFX: 
 --- !u!4 &1716498399
@@ -35261,9 +35347,7 @@ Transform:
   m_LocalPosition: {x: -2.9331079, y: 9.719815, z: 56.607178}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 141208056}
-  - {fileID: 1515927149}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1717581888
@@ -41370,7 +41454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 113906151}
-  timer: 0
+  timeAddedText: {fileID: 0}
+  flyDuration: 0.5
+  pauseDuration: 0.3
+  penaltyColor: {r: 1, g: 0, b: 0, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2077588775
 Transform:
   m_ObjectHideFlags: 0
