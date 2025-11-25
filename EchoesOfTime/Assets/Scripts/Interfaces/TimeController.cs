@@ -1,10 +1,11 @@
-﻿using System.Threading;
+using System.Threading;
 using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float raycastDistance = 100f;
+    [SerializeField] private float sphereCastRadius = 3f;
     [SerializeField] private LayerMask hitMask;
 
     
@@ -24,7 +25,11 @@ public class TimeController : MonoBehaviour
             TryRaycastAndExecute(hit =>
             {
                 if (hit.collider.TryGetComponent<ITimeStoppable>(out var stoppable))
+                {
                     stoppable.ToggleFreeze();
+                    AudioManager.instance.sfxSource.loop = false;
+                    AudioManager.instance.PlaySFX("StopTime");
+                }
             });
         }
 
@@ -41,6 +46,8 @@ public class TimeController : MonoBehaviour
                         reversible.StartRewind();
                         currentReversible = reversible; 
                         TimeManager.Instance.AddTime(10);
+                        AudioManager.instance.sfxSource.loop = false;
+                        AudioManager.instance.PlaySFX("ReverseTime");
                     }
                 });
             }
@@ -53,7 +60,21 @@ public class TimeController : MonoBehaviour
             }
         }
 
-       
+       if(Input.GetKeyDown(KeyCode.V))
+        {
+            Debug.Log("Check");
+            TryRaycastAndExecute(hit =>
+            {
+                if (!hit.collider.TryGetComponent(out ITimeExplodable explodable)) return;
+
+                Debug.Log("boom");
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.PlaySFX("ExplodeTime");
+
+                explodable.Explode(this.GetComponent<Player>());
+            }
+            );
+        }
 
         
     }
@@ -62,19 +83,17 @@ public class TimeController : MonoBehaviour
 
     private void TryRaycastAndExecute(System.Action<RaycastHit> onHit)
     {
-        Ray ray = mainCamera.ScreenPointToRay(
-     new Vector3(Screen.width / 2, Screen.height / 2)
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward//Camera.main.ScreenToWorldPoint(
+     //new Vector3(Screen.width / 2, Screen.height / 2, 10) - Camera.main.transform.position)
    );
 
-        // --- AÑADE ESTA LÍNEA ---
-        // Dibuja el rayo en la vista "Scene" para ver a dónde apunta
+       
         Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow, 1.0f);
-        // -----------------------
+        
 
-        if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, hitMask))
+        if (Physics.SphereCast(ray,2, out RaycastHit hit, raycastDistance, hitMask))
         {
-            // Si entra aquí, añade un log para estar seguro
-            Debug.Log("¡Golpeado! -> " + hit.collider.name, hit.collider.gameObject);
+
             onHit?.Invoke(hit);
         }
     }

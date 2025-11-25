@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     bool isWallRight = false;
     bool isWallLeft = false;
     float rotateCameraZ = 0f;
-    bool isGrounded;
+    bool isGrounded = false;
     [SerializeField]float rotationSpeed = 5f;
 
     bool isWall => isWallLeft || isWallRight;
@@ -66,13 +66,18 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        CheckpointManager.Instance.player = this;
+        CheckpointManager.Instance.Respawn();
+
+        //Debug.Log(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        
+        //Debug.Log(transform.position);
+
         CheckForWall();
         IsWallRunning();
 
@@ -80,6 +85,15 @@ public class Player : MonoBehaviour
         {
             // Si estamos en el suelo, reiniciamos el contador
             coyoteTimeCounter = coyoteTimeDuration;
+            if(inputReader.MoveVector.sqrMagnitude > 0f)
+            {
+                AudioManager.instance.sfxSource.loop = true;
+                AudioManager.instance.PlaySFX("Run");
+            } else if(AudioManager.instance.curSFX == "Run")
+            {
+                AudioManager.instance.sfxSource.loop = false;
+                AudioManager.instance.StopSFX();
+            }
         }
         else
         {
@@ -91,6 +105,8 @@ public class Player : MonoBehaviour
 
     private void LateUpdate()
     {
+        //Debug.Log(transform.position);
+
         // 1. Coger el input vertical (Mouse Y)
         Vector2 rotateVector = inputReader.LookVector;
         float verticalInput = rotateVector.y;
@@ -114,6 +130,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Debug.Log(transform.position);
 
         AddForces(); 
         
@@ -182,10 +199,14 @@ public class Player : MonoBehaviour
 
 
             rb.AddForce((wallForward * jumpForce) + (wallNormal * (jumpForce * magnitudeJump)),ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
         }
         else if (coyoteTimeCounter > 0f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            AudioManager.instance.sfxSource.loop = false;
+            AudioManager.instance.PlaySFX("Jump");
 
             coyoteTimeCounter = 0f;
         }
